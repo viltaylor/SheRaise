@@ -60,6 +60,78 @@ Categories include:
 2. Take the Entry Test (optional)
 3. Explore personalized course recommendations
 4. Learn, connect, and grow 🌱
+
+## 🔄 User Flow – SheRaise App
+
+SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest**. Each user has a tailored journey for an optimal learning and mentoring experience.
+
+
+### 👩‍🎓 Student Flow
+
+1. **SplashScreen**  
+   → Displays SheRaise logo and animation on app launch.
+
+2. **Select Role**  
+   → User chooses **Student**.
+
+3. **Entrance Test**  
+   → New users must take an entrance test.  
+   → Existing users can choose to **Log In**.
+
+4. **Take Test**  
+   → 10-question multiple choice test.  
+   → Determines user's skill level (Beginner, Intermediate, Advanced).
+
+5. **Sign Up**  
+   → User creates an account to view test results and unlock full features.
+
+6. **Homepage**  
+   → Full access to:
+   - 🎓 Courses
+   - 👩‍🏫 Mentor
+   - 💼 JobSeeker
+   - 🤝 Friends
+   - 💬 Forum
+
+### 🧑‍🏫 Mentor Flow
+
+1. **SplashScreen**  
+   → App opens with animated logo.
+
+2. **Select Role**  
+   → User chooses **Mentor**.
+
+3. **Register as Mentor**  
+   → Mentor fills out registration form:
+   - Name
+   - Area of expertise
+   - Certifications
+   - Contact info / LinkedIn
+
+4. **Pending Approval**  
+   → Account status is set to **Pending**.  
+   → Admin reviews and approves mentor application.
+
+5. **Mentor Homepage**  
+   → Once approved, mentor can:
+   - Manage their profile
+   - View mentee requests
+   - Respond via chat
+
+### 🕊️ Guest Flow
+
+1. **SplashScreen**  
+   → Initial logo display on app launch.
+
+2. **Select Role**  
+   → User selects **Continue as Guest**.
+
+3. **Guest Homepage**  
+   → Limited access to:
+   - View available courses (no enrollment)
+   - View mentor profiles (no direct contact)
+   - Read educational articles  
+   → Prompted to sign up for full access.
  
 ## 🛠️ Tech Stack
 
