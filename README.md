@@ -1,43 +1,89 @@
-# SheRaise 
-**Empowering Women Through Knowledge, Skills, and Career Opportunities**
+<h1 align="center">
+  SheRaise
+</h1>
+<p align="center">
+  <em>Empowering Women Through Learning, Mentorship, and Career Growth</em>
+</p>
 
-SheRaise is a mobile application developed using Kotlin in Android Studio. It is designed to empower women by providing professional courses, mentorship, and job-seeking features all in one platform.
+<p align="center">
+  <img src="app/src/main/res/drawable/logo.png" alt="SheRaise Logo" width="150"/>
+</p>
 
-<img src="app/src/main/res/drawable/logo.png" alt="SheRaise Logo" width="200"/>
+
+## 🌟 About SheRaise
+SheRaise is a mobile application designed to empower women through education, skill development, career support, and mentorship. Built using Kotlin and Android Studio, the app provides a space for women to grow professionally through courses, job-seeking features, and mentoring connections.
 
 ## 🚀 Features
 
 - **🧠 Courses**
-  - Learn skills like E-Commerce, Coding, Digital Marketing, Photography, Public Speaking, Design, and more.
-  - Available in multiple formats: Articles, E-books, Video Learning, and Exams.
+Learn new skills through:
+  - 📖 Articles
+  - 📚 E-Books
+  - 🎥 Interactive Video Learning
+  - 📝 Skill Assessments
+
+Categories include:
+> Coding · Digital Marketing · Public Speaking · Design · Editing · and more
 
 - **👩‍🏫 Mentor**
-  - Connect with mentors from various industries.
-  - View mentor profiles with certifications, skills, and contact info.
+  - Browse mentor profiles with certifications and expertise
+  - Access contact details and LinkedIn
+  - Request guidance and build professional relationships
 
 - **💬 Friends**
   - Build a community of supportive women.
   - Use chat features to share and grow together.
 
 - **📌 JobSeeker**
-  - Search and apply for jobs directly from the app.
-  - View detailed job descriptions and requirements.
+  - Discover curated job listings
+  - Read full descriptions and requirements
+  - Apply in-app with one click
+  - Managed and verified by admin team
 
 - **👥 Role Selection**
   - Upon signup, users are prompted to select their role as either a Student or Mentor.
  
-  ## 🛠️ Tech Stack
+## 🚧 How It Works
+
+> Get started in a few simple steps:
+1. Sign up (as Guest, Student, or Mentor)
+2. Take the Entry Test (optional)
+3. Explore personalized course recommendations
+4. Learn, connect, and grow 🌱
+ 
+## 🛠️ Tech Stack
 
 - **Language**: Kotlin
 - **IDE**: Android Studio Meerkat | 2024.3.1
-- **Database**: MySQL (for backend, if integrated)
+- **Database**: MySQL (optional, if backend integrated)
 - **Version Control**: GitHub
 
-## 📱 Platform Requirements
+## 💻 Hardware Specs
 
-- **OS**: Android (tested on Android 11+)
-- **Hardware**: Minimum 2GB RAM, recommended 4GB+
-- **Development OS**: Windows 11
-- **Processor**: Intel Core i5-10210U @ 1.6GHz
-- **RAM**: 8 GB
-- **GPU**: NVIDIA MX350
+| Component  | Specification              |
+|------------|----------------------------|
+| Platform   | Windows 11                 |
+| Processor  | Intel Core i5-10210U 1.6GHz|
+| RAM        | 8 GB                       |
+| GPU        | NVIDIA MX350               |
+| Display    | 15.6" LED Screen           |
+
+## 📷 Assets
+
+### 🔗 Logo
+<p align="center">
+  <img src="app/src/main/res/drawable/logo.png" alt="Wireframe" width="600"/>
+</p>
+
+### 🔗 Wireframe
+<p align="center">
+  <img src="./assets/wireframe.png" alt="Wireframe" width="600"/>
+</p>
+
+## 👩‍💻 Developers
+
+- **Josiah Owen Yoswandi**
+- **Orville Dwayne Taylor**
+- **Sean Kenneth Tommy Keleyan**
+
+
