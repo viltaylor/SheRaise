@@ -4,6 +4,7 @@
 SheRaise is a mobile application developed using Kotlin in Android Studio. It is designed to empower women by providing professional courses, mentorship, and job-seeking features all in one platform.
 
 ![SheRaise Logo](app/src/main/res/drawable/logo.png)
+<img src="app/src/main/res/drawable/logo.png" alt="SheRaise Logo" width="200"/>
 
 ## 🚀 Features
 
