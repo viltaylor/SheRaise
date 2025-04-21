@@ -13,6 +13,16 @@
 ## 🌟 About SheRaise
 SheRaise is a mobile application designed to empower women through education, skill development, career support, and mentorship. Built using Kotlin and Android Studio, the app provides a space for women to grow professionally through courses, job-seeking features, and mentoring connections.
 
+## 🎨 Logo Meaning
+
+The name **SheRaise** comes from _She_ (representing women) and _Raise_ (to uplift or elevate).  
+The logo is designed to reflect:
+- **A growing mind**: symbolizing the continuous development of women's skills and knowledge.
+- **Radiating petals or rays**: representing disciplines from various professional fields.
+- **Empowerment & Unity**: a modern, clean design to show strength, femininity, and connectedness.
+
+The logo communicates the core mission of SheRaise: _to help women rise, grow, and thrive._
+
 ## 🚀 Features
 
 - **🧠 Courses**
