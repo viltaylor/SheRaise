@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Please Select Your Role"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,26 +27,57 @@
         android:layout_height="wrap_content"
         android:text="To begin, let us know who you are\nChoose your role below:"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mentorButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.207" />
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        app:layout_constraintVertical_bias="0.5" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="195dp"
-        android:layout_height="195dp"
-        android:text="Click me"
-        android:scaleType="fitStart"
-        android:background="@color/white"
-
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:id="@+id/mentorButton"
+        android:layout_width="175sp"
+        android:layout_height="249sp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.369"
-        app:srcCompat="@drawable/studentlogo" />
+        app:layout_constraintTop_toBottomOf="@+id/subTitle">
+
+        <ImageView
+            android:id="@+id/studentImage"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:contentDescription="Student image"
+            android:scaleType="fitCenter"
+            android:src="@drawable/studentlogo" />
+
+        <TextView
+            android:id="@+id/studentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:text="Student"
+            android:textColor="#333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mentorDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="if you're here to learn and grow your skills."
+            android:textAlignment="center"
+            android:textColor="#888"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
