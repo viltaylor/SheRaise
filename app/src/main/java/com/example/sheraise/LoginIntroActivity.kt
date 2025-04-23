@@ -2,17 +2,18 @@ package com.example.sheraise
 
 import android.os.Bundle
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.ImageView
-import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.view.animation.AnimationUtils
 
 class LoginIntroActivity : AppCompatActivity() {
 
-    private lateinit var studentButton: LinearLayout
-    private lateinit var mentorButton: LinearLayout
+    private lateinit var studentButton: FrameLayout
+    private lateinit var mentorButton: FrameLayout
     private lateinit var studentCheck: ImageView
     private lateinit var mentorCheck: ImageView
 
@@ -27,8 +28,8 @@ class LoginIntroActivity : AppCompatActivity() {
             insets
         }
 
-        studentButton = findViewById(R.id.studentButton)
-        mentorButton = findViewById(R.id.mentorButton)
+        studentButton = findViewById<FrameLayout>(R.id.studentButton)
+        mentorButton = findViewById<FrameLayout>(R.id.mentorButton)
         studentCheck = findViewById(R.id.studentCheckIcon)
         mentorCheck = findViewById(R.id.mentorCheckIcon)
 
@@ -43,13 +44,22 @@ class LoginIntroActivity : AppCompatActivity() {
         }
     }
 
-    private fun selectRole(button: LinearLayout, checkIcon: ImageView) {
+    private fun selectRole(button: FrameLayout, checkIcon: ImageView) {
         button.isSelected = true
         checkIcon.visibility = View.VISIBLE
+        val fadeIn = AnimationUtils.loadAnimation(this, R.anim.select_animation)
+        checkIcon.startAnimation(fadeIn)
     }
 
-    private fun deselectRole(button: LinearLayout, checkIcon: ImageView) {
+
+    private fun deselectRole(button: FrameLayout, checkIcon: ImageView) {
         button.isSelected = false
-        checkIcon.visibility = View.GONE
+        val fadeOut = AnimationUtils.loadAnimation(this, android.R.anim.fade_out)
+        checkIcon.startAnimation(fadeOut)
+        // Delay hiding the icon until the fade-out finishes
+        checkIcon.postDelayed({
+            checkIcon.visibility = View.GONE
+        }, fadeOut.duration)
     }
+
 }
