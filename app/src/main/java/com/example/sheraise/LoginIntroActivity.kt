@@ -55,11 +55,18 @@ class LoginIntroActivity : AppCompatActivity() {
     private fun deselectRole(button: FrameLayout, checkIcon: ImageView) {
         button.isSelected = false
         val fadeOut = AnimationUtils.loadAnimation(this, android.R.anim.fade_out)
+        fadeOut.setAnimationListener(object : android.view.animation.Animation.AnimationListener {
+            override fun onAnimationStart(animation: android.view.animation.Animation?) {}
+
+            override fun onAnimationEnd(animation: android.view.animation.Animation?) {
+                checkIcon.visibility = View.GONE
+                checkIcon.clearAnimation() // Clear to prevent lingering effects
+            }
+
+            override fun onAnimationRepeat(animation: android.view.animation.Animation?) {}
+        })
         checkIcon.startAnimation(fadeOut)
-        // Delay hiding the icon until the fade-out finishes
-        checkIcon.postDelayed({
-            checkIcon.visibility = View.GONE
-        }, fadeOut.duration)
     }
+
 
 }
