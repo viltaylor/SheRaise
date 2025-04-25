@@ -1,5 +1,6 @@
 package com.example.sheraise
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.FrameLayout
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.view.animation.AnimationUtils
+import android.widget.Button
 
 class LoginIntroActivity : AppCompatActivity() {
 
@@ -16,6 +18,9 @@ class LoginIntroActivity : AppCompatActivity() {
     private lateinit var mentorButton: FrameLayout
     private lateinit var studentCheck: ImageView
     private lateinit var mentorCheck: ImageView
+    private lateinit var confirmButton: Button
+    private var selectedRole: String? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,16 +37,36 @@ class LoginIntroActivity : AppCompatActivity() {
         mentorButton = findViewById<FrameLayout>(R.id.mentorButton)
         studentCheck = findViewById(R.id.studentCheckIcon)
         mentorCheck = findViewById(R.id.mentorCheckIcon)
+        confirmButton = findViewById(R.id.confirmButton)
+
+        confirmButton.setOnClickListener {
+            when (selectedRole) {
+                "student" -> {
+                    // TODO: Start Student activity
+                    startActivity(Intent(this, StartQuizActivity::class.java))
+                }
+                "mentor" -> {
+//                    // TODO: Start Mentor activity
+//                    startActivity(Intent(this, MentorActivity::class.java))
+                }
+            }
+        }
+
 
         studentButton.setOnClickListener {
             selectRole(studentButton, studentCheck)
             deselectRole(mentorButton, mentorCheck)
+            selectedRole = "student"
+            enableConfirmButton()
         }
 
         mentorButton.setOnClickListener {
             selectRole(mentorButton, mentorCheck)
             deselectRole(studentButton, studentCheck)
+            selectedRole = "mentor"
+            enableConfirmButton()
         }
+
     }
 
     private fun selectRole(button: FrameLayout, checkIcon: ImageView) {
@@ -54,19 +79,18 @@ class LoginIntroActivity : AppCompatActivity() {
 
     private fun deselectRole(button: FrameLayout, checkIcon: ImageView) {
         button.isSelected = false
-        val fadeOut = AnimationUtils.loadAnimation(this, android.R.anim.fade_out)
-        fadeOut.setAnimationListener(object : android.view.animation.Animation.AnimationListener {
-            override fun onAnimationStart(animation: android.view.animation.Animation?) {}
-
-            override fun onAnimationEnd(animation: android.view.animation.Animation?) {
-                checkIcon.visibility = View.GONE
-                checkIcon.clearAnimation() // Clear to prevent lingering effects
-            }
-
-            override fun onAnimationRepeat(animation: android.view.animation.Animation?) {}
-        })
-        checkIcon.startAnimation(fadeOut)
+        checkIcon.clearAnimation()
+        checkIcon.visibility = View.GONE
     }
 
+    private fun enableConfirmButton() {
+        if (confirmButton.visibility != View.VISIBLE) {
+            confirmButton.visibility = View.VISIBLE
+            confirmButton.animate()
+                .alpha(1f)
+                .setDuration(300)
+                .start()
+        }
+    }
 
 }
