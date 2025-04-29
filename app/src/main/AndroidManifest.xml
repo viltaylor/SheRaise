@@ -13,6 +13,9 @@
         android:theme="@style/AppTheme"
         tools:targetApi="33">
         <activity
+            android:name=".EntranceTestActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginIntroActivity"
             android:exported="false" />
         <activity
@@ -32,6 +35,7 @@
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
