@@ -51,8 +51,11 @@ Categories include:
   - Managed and verified by admin team
 
 - **👥 Role Selection**
-  - Upon signup, users are prompted to select their role as either a Student or Mentor.
- 
+  - 👩 Student: Takes entrance test, accesses learning materials
+  - 🎓 Mentor: Registers, waits for approval, guides students
+  - 🧑‍💼 Admin: Manages users, courses, and job listings
+  - 🕶 Guest: Can view courses but with limited access
+
 ## 🚧 How It Works
 
 > Get started in a few simple steps:
@@ -75,7 +78,7 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
    → User chooses **Student**.
 
 3. **Entrance Test**  
-   → New users must take an entrance test.  
+   → New users must take an entrance test. The Entrance Test assesses the user's knowledge to categorize them into Beginner, Intermediate, or Advanced level courses. The test includes 10 multiple-choice questions from basic Computer Science.
    → Existing users can choose to **Log In**.
 
 4. **Take Test**  
