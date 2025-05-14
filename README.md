@@ -81,14 +81,14 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
    → New users must take an entrance test. The Entrance Test assesses the user's knowledge to categorize them into Beginner, Intermediate, or Advanced level courses. The test includes 10 multiple-choice questions from basic Computer Science.
    → Existing users can choose to **Log In**.
 
-4. **Take Test**  
+5. **Take Test**  
    → 10-question multiple choice test.  
    → Determines user's skill level (Beginner, Intermediate, Advanced).
 
-5. **Sign Up**  
+6. **Sign Up**  
    → User creates an account to view test results and unlock full features.
 
-6. **Homepage**  
+7. **Homepage**  
    → Full access to:
    - 🎓 Courses
    - 👩‍🏫 Mentor
