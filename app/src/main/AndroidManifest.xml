@@ -13,6 +13,9 @@
         android:theme="@style/AppTheme"
         tools:targetApi="33">
         <activity
+            android:name=".LearningSelectionActivity"
+            android:exported="false" />
+        <activity
             android:name=".EntranceTestActivity"
             android:exported="false" />
         <activity
