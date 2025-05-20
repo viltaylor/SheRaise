@@ -2,11 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="150dp"
     android:layout_height="150dp"
-    android:layout_margin="8dp"
+    android:layout_margin="18dp"
     android:orientation="vertical"
-    android:background="@drawable/rounded_option"
+    android:background="@drawable/course_background_selector"
     android:gravity="center"
-    android:padding="12dp">
+    android:padding="20dp">
 
     <ImageView
         android:id="@+id/iconView"
@@ -16,11 +16,12 @@
 
     <TextView
         android:id="@+id/titleText"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Title"
         android:textStyle="bold"
+        android:textColor="@color/white"
         android:textAlignment="center"
-        android:textSize="16sp"/>
+        android:textSize="18sp"/>
 </LinearLayout>

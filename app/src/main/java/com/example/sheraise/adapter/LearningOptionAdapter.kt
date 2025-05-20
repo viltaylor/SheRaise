@@ -31,10 +31,15 @@ class LearningOptionAdapter(
         holder.title.text = option.title
         holder.icon.setImageResource(option.iconResId)
 
-        holder.itemView.alpha = if (selectedOptions.contains(option)) 0.5f else 1.0f
+        val isSelected = selectedOptions.contains(option)
+
+        // Visual selection effect
+        holder.itemView.isSelected = isSelected
+        holder.itemView.elevation = if (isSelected) 20f else 0f
+        holder.itemView.translationZ = if (isSelected) 10f else 0f
 
         holder.itemView.setOnClickListener {
-            if (selectedOptions.contains(option)) {
+            if (isSelected) {
                 selectedOptions.remove(option)
             } else {
                 selectedOptions.add(option)
@@ -43,6 +48,7 @@ class LearningOptionAdapter(
             onSelectionChanged()
         }
     }
+
 
     override fun getItemCount(): Int = options.size
 }

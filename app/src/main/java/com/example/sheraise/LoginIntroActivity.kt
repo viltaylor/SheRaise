@@ -43,7 +43,7 @@ class LoginIntroActivity : AppCompatActivity() {
             when (selectedRole) {
                 "student" -> {
                     // TODO: Start Student activity
-                    startActivity(Intent(this, StartQuizActivity::class.java))
+                    startActivity(Intent(this, EntranceTestActivity::class.java))
                 }
                 "mentor" -> {
 //                    // TODO: Start Mentor activity
