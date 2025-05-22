@@ -3,6 +3,7 @@ package com.example.sheraise
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -38,9 +39,16 @@ class LearningSelectionActivity : AppCompatActivity() {
         }
 
         btnContinue.setOnClickListener {
-            val intent = Intent(this, StartQuizActivity::class.java)
-            intent.putExtra("selected_topics", selectedOptions.map { it.title }.toTypedArray())
-            startActivity(intent)
+            if (selectedOptions.isNotEmpty()) {
+                val intent = Intent(this, StartQuizActivity::class.java)
+                intent.putExtra("selected_topics", selectedOptions.map { it.title }.toTypedArray())
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Please select at least one topic to continue.", Toast.LENGTH_SHORT).show()
+            }
         }
+
+        // Optional: disable button initially
+        btnContinue.isEnabled = false
     }
 }

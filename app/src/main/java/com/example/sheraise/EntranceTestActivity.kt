@@ -13,12 +13,10 @@ class EntranceTestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
         setContentView(R.layout.activity_entrance_test)
 
-        // Safely find the root view (must match an ID in the layout XML)
-        val rootView = findViewById<android.view.View>(R.id.root)
-        if (rootView != null) {
+        // Handle insets for status/navigation bars
+        findViewById<android.view.View>(R.id.root)?.let { rootView ->
             ViewCompat.setOnApplyWindowInsetsListener(rootView) { v, insets ->
                 val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
                 v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -26,16 +24,14 @@ class EntranceTestActivity : AppCompatActivity() {
             }
         }
 
-        val loginLink = findViewById<TextView>(R.id.loginLink)
-        loginLink?.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+        // Link to login screen
+        findViewById<TextView>(R.id.loginLink)?.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
         }
-        // Start Learning button
-        val btnStartLearning = findViewById<Button>(R.id.getStartedButton)
-        btnStartLearning?.setOnClickListener {
-            val intent = Intent(this, LearningSelectionActivity::class.java)
-            startActivity(intent)
+
+        // Start learning - navigate to learning selection screen
+        findViewById<Button>(R.id.getStartedButton)?.setOnClickListener {
+            startActivity(Intent(this, LearningSelectionActivity::class.java))
         }
     }
 }
