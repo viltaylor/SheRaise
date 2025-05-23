@@ -162,45 +162,47 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
 
 ### 🔗 Wireframe
 
+**Student**
 <p align="center">
-  **Student**
-  <img src="./Wireframe/SplashScreen.jpg" alt="Splash Screen" width="100"/>
-  <img src="./Wireframe/Role.jpg" alt="Role Wireframe" width="100"/>
-  <img src="./Wireframe/Entrance test.jpg" alt="Entrance Test Wireframe" width="100"/>
-  <img src="./Wireframe/Entrance test (1).jpg" alt="Entrance Test Wireframe" width="100"/>
-  <img src="./Wireframe/Entrance test (2).jpg" alt="Entrance Test Wireframe" width="100"/>
-  <img src="./Wireframe/Entrance test (3).jpg" alt="Entrance Test Wireframe" width="100"/>
-  <img src="./Wireframe/Login.jpg" alt="Log In Wireframe" width="100"/>
-  <img src="./Wireframe/Sign Up.jpg" alt="Sign Up Wireframe" width="100"/>
-  <img src="./Wireframe/Homepage.jpg" alt="Homepage Wireframe" width="100"/>
-  <img src="./Wireframe/Student Dashboard.jpg" alt="Student Dashboard Wireframe" width="100"/>
-  <img src="./Wireframe/Course (6).jpg" alt="Course Wireframe" width="100"/>
-  <img src="./Wireframe/Course (7).jpg" alt="Course Wireframe" width="100"/>
-  <img src="./Wireframe/Course (8).jpg" alt="Course Wireframe" width="100"/>
-  <img src="./Wireframe/Course (9).jpg" alt="Course Wireframe" width="100"/>
-  <img src="./Wireframe/Course (10).jpg" alt="Course Wireframe" width="100"/>
-  <img src="./Wireframe/Course (11).jpg" alt="Course Wireframe" width="100"/>
-  <img src="./Wireframe/Course.jpg" alt="Course Wireframe" width="100"/>
-  <img src="./Wireframe/Course (1).jpg" alt="Course Wireframe" width="100"/>
-  <img src="./Wireframe/Friends.jpg" alt="Course Wireframe" width="100"/>
-  <img src="./Wireframe/Friend Chat.jpg" alt="Course Wireframe" width="100"/>
-  <img src="./Wireframe/Mentor.jpg" alt="Mentor Wireframe" width="100"/>
-  <img src="./Wireframe/Mentor Detail.jpg" alt="Mentor Wireframe" width="100"/>
-  <img src="./Wireframe/Jobseeker.jpg" alt="Jobseeker Wireframe" width="100"/>
-  <img src="./Wireframe/Jobseeker Details.jpg" alt="Jobseeker Wireframe" width="100"/>
+
+  <img src="./Wireframe/SplashScreen.jpg" alt="Splash Screen" width="300"/>
+  <img src="./Wireframe/Role.jpg" alt="Role Wireframe" width="300"/>
+  <img src="./Wireframe/Entrance test.jpg" alt="Entrance Test Wireframe" width="300"/>
+  <img src="./Wireframe/Entrance test (1).jpg" alt="Entrance Test Wireframe" width="300"/>
+  <img src="./Wireframe/Entrance test (2).jpg" alt="Entrance Test Wireframe" width="300"/>
+  <img src="./Wireframe/Entrance test (3).jpg" alt="Entrance Test Wireframe" width="300"/>
+  <img src="./Wireframe/Login.jpg" alt="Log In Wireframe" width="300"/>
+  <img src="./Wireframe/Sign Up.jpg" alt="Sign Up Wireframe" width="300"/>
+  <img src="./Wireframe/Homepage.jpg" alt="Homepage Wireframe" width="300"/>
+  <img src="./Wireframe/Student Dashboard.jpg" alt="Student Dashboard Wireframe" width="300"/>
+  <img src="./Wireframe/Course (6).jpg" alt="Course Wireframe" width="300"/>
+  <img src="./Wireframe/Course (7).jpg" alt="Course Wireframe" width="300"/>
+  <img src="./Wireframe/Course (8).jpg" alt="Course Wireframe" width="300"/>
+  <img src="./Wireframe/Course (9).jpg" alt="Course Wireframe" width="300"/>
+  <img src="./Wireframe/Course (10).jpg" alt="Course Wireframe" width="300"/>
+  <img src="./Wireframe/Course (11).jpg" alt="Course Wireframe" width="300"/>
+  <img src="./Wireframe/Course.jpg" alt="Course Wireframe" width="300"/>
+  <img src="./Wireframe/Course (1).jpg" alt="Course Wireframe" width="300"/>
+  <img src="./Wireframe/Friends.jpg" alt="Course Wireframe" width="300"/>
+  <img src="./Wireframe/Friend Chat.jpg" alt="Course Wireframe" width="300"/>
+  <img src="./Wireframe/Mentor.jpg" alt="Mentor Wireframe" width="300"/>
+  <img src="./Wireframe/Mentor Detail.jpg" alt="Mentor Wireframe" width="300"/>
+  <img src="./Wireframe/Jobseeker.jpg" alt="Jobseeker Wireframe" width="300"/>
+  <img src="./Wireframe/Jobseeker Details.jpg" alt="Jobseeker Wireframe" width="300"/>
 </p>
 
-<p align="center">
  **Mentor**
- <img src="./Wireframe/Mentor info.jpg" alt="Menotr Signup Wireframe" width="100"/>
- <img src="./Wireframe/Mentor info (1).jpg" alt="Mentor Signup Wireframe" width="100"/>
- <img src="./Wireframe/Mentor Dashboard.jpg" alt="Mentor Signup Wireframe" width="100"/>
- <img src="./Wireframe/Mentor Dashboard (1).jpg" alt="Mentor Dashboard Wireframe" width="100"/>
- <img src="./Wireframe/Mentor Course.jpg" alt="Mentor Course Wireframe" width="100"/>
- <img src="./Wireframe/Mentor Course 1.jpg" alt="Mentor Course Wireframe" width="100"/>
- <img src="./Wireframe/Mentor Course 2.jpg" alt="Mentor Course Wireframe" width="100"/>
- <img src="./Wireframe/Mentor Course 3.jpg" alt="Mentor Course Wireframe" width="100"/>
- <img src="./Wireframe/Mentor Course 4.jpg" alt="Mentor Course Wireframe" width="100"/>
+<p align="center">
+
+ <img src="./Wireframe/Mentor info.jpg" alt="Menotr Signup Wireframe" width="300"/>
+ <img src="./Wireframe/Mentor info (1).jpg" alt="Mentor Signup Wireframe" width="300"/>
+ <img src="./Wireframe/Mentor Dashboard.jpg" alt="Mentor Signup Wireframe" width="300"/>
+ <img src="./Wireframe/Mentor Dashboard (1).jpg" alt="Mentor Dashboard Wireframe" width="300"/>
+ <img src="./Wireframe/Mentor Course.jpg" alt="Mentor Course Wireframe" width="300"/>
+ <img src="./Wireframe/Mentor Course 1.jpg" alt="Mentor Course Wireframe" width="300"/>
+ <img src="./Wireframe/Mentor Course 2.jpg" alt="Mentor Course Wireframe" width="300"/>
+ <img src="./Wireframe/Mentor Course 3.jpg" alt="Mentor Course Wireframe" width="300"/>
+ <img src="./Wireframe/Mentor Course 4.jpg" alt="Mentor Course Wireframe" width="300"/>
 </p>
  
 ## 👩‍💻 Developers
