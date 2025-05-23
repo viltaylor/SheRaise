@@ -181,7 +181,7 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
   <img src="./Wireframe/Course (10).jpg" alt="Course Wireframe" width="400"/>
   <img src="./Wireframe/Course (11).jpg" alt="Course Wireframe" width="400"/>
   <img src="./Wireframe/Course (1).jpg" alt="Course Wireframe" width="400"/>
-  <img src="./Wireframe/Course.jpg" alt="Course Wireframe" width="400"/>
+  <img src="./Wireframe/Course.png" alt="Course Wireframe" width="400"/>
   <img src="./Wireframe/Friends.jpg" alt="Course Wireframe" width="400"/>
   <img src="./Wireframe/Friend Chat.jpg" alt="Course Wireframe" width="400"/>
   <img src="./Wireframe/Mentor.jpg" alt="Mentor Wireframe" width="400"/>
@@ -191,7 +191,17 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
 </p>
 
 **Mentor**
+ <img src="./Wireframe/Mentor info.jpg" alt="Menotr Signup Wireframe" width="400"/>
+ <img src="./Wireframe/Mentor info (1).jpg" alt="Mentor Signup Wireframe" width="400"/>
+ <img src="./Wireframe/Mentor Dashboard.jpg" alt="Mentor Signup Wireframe" width="400"/>
+ <img src="./Wireframe/Mentor Dashboard (1).jpg" alt="Mentor Dashboard Wireframe" width="400"/>
+ <img src="./Wireframe/Mentor Course.jpg" alt="Mentor Course Wireframe" width="400"/>
+ <img src="./Wireframe/Mentor Course 1.jpg" alt="Mentor Course Wireframe" width="400"/>
+ <img src="./Wireframe/Mentor Course 2.jpg" alt="Mentor Course Wireframe" width="400"/>
+ <img src="./Wireframe/Mentor Course 3.jpg" alt="Mentor Course Wireframe" width="400"/>
+ <img src="./Wireframe/Mentor Course 4.jpg" alt="Mentor Course Wireframe" width="400"/>
 
+ 
 ## 👩‍💻 Developers
 
 - **Josiah Owen Yoswandi**
