@@ -165,9 +165,9 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
   <img src="./Wireframe/SplashScreen.jpg" alt="Splash Screen" width="400"/>
   <img src="./Wireframe/Role.jpg" alt="Role Wireframe" width="400"/>
   <img src="./Wireframe/Entrance test.jpg" alt="Entrance Test Wireframe" width="400"/>
-  <img src="./Wireframe/Entrance test(1).jpg" alt="Entrance Test Wireframe" width="400"/>
-  <img src="./Wireframe/Entrance test(2).jpg" alt="Entrance Test Wireframe" width="400"/>
-  <img src="./Wireframe/Entrance test(3).jpg" alt="Entrance Test Wireframe" width="400"/>
+  <img src="./Wireframe/Entrance test (1).jpg" alt="Entrance Test Wireframe" width="400"/>
+  <img src="./Wireframe/Entrance test (2).jpg" alt="Entrance Test Wireframe" width="400"/>
+  <img src="./Wireframe/Entrance test (3).jpg" alt="Entrance Test Wireframe" width="400"/>
   <img src="./Wireframe/Login.jpg" alt="Log In Wireframe" width="400"/>
   <img src="./Wireframe/Sign Up.jpg" alt="Sign Up Wireframe" width="400"/>
   <img src="./Wireframe/Homepage.jpg" alt="Homepage Wireframe" width="400"/>
