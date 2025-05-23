@@ -161,6 +161,8 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
 </p>
 
 ### 🔗 Wireframe
+
+**Student**
 <p align="center">
   <img src="./Wireframe/SplashScreen.jpg" alt="Splash Screen" width="400"/>
   <img src="./Wireframe/Role.jpg" alt="Role Wireframe" width="400"/>
@@ -171,7 +173,24 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
   <img src="./Wireframe/Login.jpg" alt="Log In Wireframe" width="400"/>
   <img src="./Wireframe/Sign Up.jpg" alt="Sign Up Wireframe" width="400"/>
   <img src="./Wireframe/Homepage.jpg" alt="Homepage Wireframe" width="400"/>
+  <img src="./Wireframe/Student Dashboard.jpg" alt="Student Dashboard Wireframe" width="400"/>
+  <img src="./Wireframe/Course (6).jpg" alt="Course Wireframe" width="400"/>
+  <img src="./Wireframe/Course (7).jpg" alt="Course Wireframe" width="400"/>
+  <img src="./Wireframe/Course (8).jpg" alt="Course Wireframe" width="400"/>
+  <img src="./Wireframe/Course (9).jpg" alt="Course Wireframe" width="400"/>
+  <img src="./Wireframe/Course (10).jpg" alt="Course Wireframe" width="400"/>
+  <img src="./Wireframe/Course (11).jpg" alt="Course Wireframe" width="400"/>
+  <img src="./Wireframe/Course (1).jpg" alt="Course Wireframe" width="400"/>
+  <img src="./Wireframe/Course.jpg" alt="Course Wireframe" width="400"/>
+  <img src="./Wireframe/Friends.jpg" alt="Course Wireframe" width="400"/>
+  <img src="./Wireframe/Friend Chat.jpg" alt="Course Wireframe" width="400"/>
+  <img src="./Wireframe/Mentor.jpg" alt="Mentor Wireframe" width="400"/>
+  <img src="./Wireframe/Mentor Detail.jpg" alt="Mentor Wireframe" width="400"/>
+  <img src="./Wireframe/Jobseeker.jpg" alt="Jobseeker Wireframe" width="400"/>
+  <img src="./Wireframe/Jobseeker Details.jpg" alt="Jobseeker Wireframe" width="400"/>
 </p>
+
+**Mentor**
 
 ## 👩‍💻 Developers
 
