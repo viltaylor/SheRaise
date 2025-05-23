@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="app/src/main/res/drawable/logo.png" alt="SheRaise Logo" width="150"/>
+  <img src="./Wireframe/Logo SheRaise.jpg" alt="SheRaise Logo" width="150"/>
 </p>
 
 
@@ -157,7 +157,7 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
 
 ### 🔗 Logo
 <p align="center">
-  <img src="app/src/main/res/drawable/logo.png" alt="Wireframe" width="600"/>
+  <img src="./Wireframe/Logo SheRaise.jpg" alt="Wireframe" width="600"/>
 </p>
 
 ### 🔗 Wireframe
