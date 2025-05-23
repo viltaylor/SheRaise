@@ -180,8 +180,8 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
   <img src="./Wireframe/Course (9).jpg" alt="Course Wireframe" width="400"/>
   <img src="./Wireframe/Course (10).jpg" alt="Course Wireframe" width="400"/>
   <img src="./Wireframe/Course (11).jpg" alt="Course Wireframe" width="400"/>
+  <img src="./Wireframe/Course.jpg" alt="Course Wireframe" width="400"/>
   <img src="./Wireframe/Course (1).jpg" alt="Course Wireframe" width="400"/>
-  <img src="./Wireframe/Course.png" alt="Course Wireframe" width="400"/>
   <img src="./Wireframe/Friends.jpg" alt="Course Wireframe" width="400"/>
   <img src="./Wireframe/Friend Chat.jpg" alt="Course Wireframe" width="400"/>
   <img src="./Wireframe/Mentor.jpg" alt="Mentor Wireframe" width="400"/>
