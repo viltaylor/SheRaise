@@ -191,6 +191,7 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
 </p>
 
 **Mentor**
+<p align="center">
  <img src="./Wireframe/Mentor info.jpg" alt="Menotr Signup Wireframe" width="400"/>
  <img src="./Wireframe/Mentor info (1).jpg" alt="Mentor Signup Wireframe" width="400"/>
  <img src="./Wireframe/Mentor Dashboard.jpg" alt="Mentor Signup Wireframe" width="400"/>
@@ -200,7 +201,7 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
  <img src="./Wireframe/Mentor Course 2.jpg" alt="Mentor Course Wireframe" width="400"/>
  <img src="./Wireframe/Mentor Course 3.jpg" alt="Mentor Course Wireframe" width="400"/>
  <img src="./Wireframe/Mentor Course 4.jpg" alt="Mentor Course Wireframe" width="400"/>
-
+</p>
  
 ## 👩‍💻 Developers
 
