@@ -162,15 +162,15 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
 
 ### 🔗 Wireframe
 <p align="center">
-  <img src="./wireframe/SplashScreen.jpg" alt="Splash Screen" width="400"/>
-  <img src="./wireframe/Role.jpg" alt="Role Wireframe" width="400"/>
-  <img src="./wireframe/Entrance test.jpg" alt="Entrance Test Wireframe" width="400"/>
-  <img src="./wireframe/Entrance test(1).jpg" alt="Entrance Test Wireframe" width="400"/>
-  <img src="./wireframe/Entrance test(2).jpg" alt="Entrance Test Wireframe" width="400"/>
-  <img src="./wireframe/Entrance test(3).jpg" alt="Entrance Test Wireframe" width="400"/>
-  <img src="./wireframe/Login.jpg" alt="Log In Wireframe" width="400"/>
-  <img src="./wireframe/Sign Up.jpg" alt="Sign Up Wireframe" width="400"/>
-  <img src="./wireframe/Homepage.jpg" alt="Homepage Wireframe" width="400"/>
+  <img src="./Wireframe/SplashScreen.jpg" alt="Splash Screen" width="400"/>
+  <img src="./Wireframe/Role.jpg" alt="Role Wireframe" width="400"/>
+  <img src="./Wireframe/Entrance test.jpg" alt="Entrance Test Wireframe" width="400"/>
+  <img src="./Wireframe/Entrance test(1).jpg" alt="Entrance Test Wireframe" width="400"/>
+  <img src="./Wireframe/Entrance test(2).jpg" alt="Entrance Test Wireframe" width="400"/>
+  <img src="./Wireframe/Entrance test(3).jpg" alt="Entrance Test Wireframe" width="400"/>
+  <img src="./Wireframe/Login.jpg" alt="Log In Wireframe" width="400"/>
+  <img src="./Wireframe/Sign Up.jpg" alt="Sign Up Wireframe" width="400"/>
+  <img src="./Wireframe/Homepage.jpg" alt="Homepage Wireframe" width="400"/>
 </p>
 
 ## 👩‍💻 Developers
