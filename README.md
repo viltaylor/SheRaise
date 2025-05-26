@@ -205,6 +205,9 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
  <img src="./Wireframe/Mentor Course 4.jpg" alt="Mentor Course Wireframe" width="300"/>
 </p>
  
+## Figma
+[🔗 View SheRaise UI on Figma]([https://www.figma.com/file/YOUR_FIGMA_FILE_ID/SheRaise-Design](https://www.figma.com/design/cjepdESBv8CZK0jUr6iDC0/SheRaise?node-id=253-1731&t=ngJnObbKBeM7rzZm-0))
+
 ## 👩‍💻 Developers
 
 - **Josiah Owen Yoswandi**
