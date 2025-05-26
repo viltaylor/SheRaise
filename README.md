@@ -206,7 +206,7 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
 </p>
  
 ## Figma
-[🔗 View SheRaise UI on Figma](https://www.figma.com/design/cjepdESBv8CZK0jUr6iDC0/SheRaise?node-id=289-13029&t=ngJnObbKBeM7rzZm-0)
+[🔗 View SheRaise UI on Figma](https://www.figma.com/design/cjepdESBv8CZK0jUr6iDC0/SheRaise?node-id=0-1&p=f&t=6DEvKJ5ACylHDNAW-0)
 
 
 ## 👩‍💻 Developers
