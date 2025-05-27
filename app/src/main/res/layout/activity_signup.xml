@@ -1,10 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupActivity">
+    android:background="#FFFFFF">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="0dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/logo1"
+            android:contentDescription="Logo" />
+
+        <!-- Rounded Top Card Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_rounded_card"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:layout_marginTop="16dp">
+
+            <!-- Indicator Bar -->
+            <View
+                android:layout_width="48dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:background="#EAEAEA" />
+
+            <!-- Welcome Title -->
+            <TextView
+                android:id="@+id/txtWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome!"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Name -->
+            <TextView android:text="Name"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your name"
+                android:background="@drawable/edittext_rounded"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Email -->
+            <TextView android:text="Email"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your email"
+                android:background="@drawable/edittext_rounded"
+                android:padding="12dp"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Password -->
+            <TextView android:text="Input Password"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:background="@drawable/edittext_rounded"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Confirm Password -->
+            <TextView android:text="Confirm Password"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirm password"
+                android:inputType="textPassword"
+                android:background="@drawable/edittext_rounded"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Subtitle + Login side by side -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/txtDoYouHaveAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Do you have an account?"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/txtLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Login"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#F06292"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+
+            <!-- Sign Up Button -->
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:background="@drawable/button_rounded_dark"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Login with Google Button -->
+            <Button
+                android:id="@+id/btnGoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login With Google 🔘"
+                android:layout_gravity="center"
+                android:background="@drawable/button_white_rounded"
+                android:textColor="#000000"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:layout_marginBottom="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
