@@ -24,7 +24,7 @@ class WelcomeActivity : AppCompatActivity() {
         }
 
         txtMentor.setOnClickListener {
-            startActivity(Intent(this, MentorLoginActivity::class.java))
+//            startActivity(Intent(this, MentorLoginActivity::class.java))
         }
     }
 }
