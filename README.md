@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="./Wireframe/Logo SheRaise.jpg" alt="SheRaise Logo" width="150"/>
+  <img src="./Wireframe/Logo_SheRaise-removebg-preview.png" alt="SheRaise Logo" width="150"/>
 </p>
 
 
