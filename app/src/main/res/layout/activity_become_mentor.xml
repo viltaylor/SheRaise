@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:gravity="center_horizontal">
+
+    <!-- Hero Image -->
+    <ImageView
+        android:id="@+id/mentorImage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/mentorlogo"
+        android:contentDescription="Mentor Illustration" />
+
+    <!-- Rounded Card Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="432dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/top_rounded_card"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Indicator -->
+        <View
+            android:layout_width="48dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:background="#EAEAEA" />
+
+        <!-- Title -->
+
+        <!-- Description -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:text="Become a SheRaise mentor"
+            android:textColor="#222222"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Thank you for joining SheRaise as a mentor! Please fill in the information below so we can showcase your profile to learners."
+            android:textColor="#333333"
+            android:textSize="17sp" />
+
+
+
+        <!-- Get Started Button (lower position) -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
+        <Button
+            android:id="@+id/btnGetStarted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_white_rounded"
+            android:text="Get Started"
+            android:textColor="#F06292"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</LinearLayout>
