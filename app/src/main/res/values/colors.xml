@@ -12,4 +12,6 @@
     <color name="black2">#FF3A3A38</color>
     <color name="offwhite">#FFFBFAE8</color>
     <color name="cyan2">#A5E2E3</color>
+    <color name="nav_item_active">#000000</color> <!-- Black (Active item) -->
+    <color name="nav_item_inactive">#80000000</color> <!-- 50% Black -->
 </resources>

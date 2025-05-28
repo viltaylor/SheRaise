@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme"
         tools:targetApi="33">
         <activity
-            android:name=".HomeActivity"
+            android:name=".SplashActivity"
             android:exported="false" />
         <activity
             android:name=".StartQuizActivity"
@@ -39,7 +39,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".HomeActivity"
             android:exported="true"
             android:theme="@style/AppTheme">
             <intent-filter>
