@@ -13,6 +13,9 @@
         android:theme="@style/AppTheme"
         tools:targetApi="33">
         <activity
+            android:name=".JobseekerActivity"
+            android:exported="false" />
+        <activity
             android:name=".MentorDetailActivity"
             android:exported="false" />
         <activity
