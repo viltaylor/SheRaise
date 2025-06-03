@@ -59,9 +59,11 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom Navbar -->
-    <include
-        android:id="@+id/bottomNav"
-<!--        layout="@layout/bottom_nav_mentor"-->
-        android:layout_alignParentBottom="true" />
+<!--    <include-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/bottomNav"-->
+<!--        layout=""-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--    />-->
 </RelativeLayout>

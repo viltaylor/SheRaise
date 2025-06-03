@@ -13,7 +13,7 @@ class WelcomeActivity : AppCompatActivity() {
 
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         val btnSignUp = findViewById<Button>(R.id.btnSignUp)
-        val txtMentor = findViewById<TextView>(R.id.txtMentor)
+//        val txtMentor = findViewById<TextView>(R.id.txtMentor)
 
         btnLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
@@ -23,8 +23,8 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(Intent(this, SignUpActivity::class.java))
         }
 
-        txtMentor.setOnClickListener {
-//            startActivity(Intent(this, MentorLoginActivity::class.java))
-        }
+//        txtMentor.setOnClickListener {
+////            startActivity(Intent(this, MentorLoginActivity::class.java))
+//        }
     }
 }
