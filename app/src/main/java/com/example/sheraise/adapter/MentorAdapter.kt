@@ -30,7 +30,7 @@ class MentorAdapter(
         return MentorViewHolder(view)
     }
 
-    fun Context.dpToPx(dp: Int): Int {
+    private fun Context.dpToPx(dp: Int): Int {
         return (dp * resources.displayMetrics.density).toInt()
     }
 
