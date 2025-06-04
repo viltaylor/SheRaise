@@ -13,51 +13,7 @@
         android:theme="@style/AppTheme"
         tools:targetApi="33">
         <activity
-            android:name=".LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".ui.theme.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ScheduleActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RequestActivity"
-            android:exported="false" />
-        <activity
-            android:name=".JobseekerDetailsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".JobseekerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MentorDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MentorActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FriendsChatActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BecomeMentorDetails"
-            android:exported="false" />
-        <activity
-            android:name=".BecomeMentorActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FriendsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ForumActivity"
-            android:exported="false" />
-        <activity
-            android:name=".WelcomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HomeActivity"
+            android:name=".SplashActivity"
             android:exported="false" />
         <activity
             android:name=".StartQuizActivity"
@@ -75,10 +31,15 @@
             android:name=".SignupActivity"
             android:exported="false" />
         <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".HomeActivity"
             android:exported="true"
             android:theme="@style/AppTheme">
             <intent-filter>
