@@ -44,9 +44,9 @@
                     android:id="@+id/profileImage"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/logo"
+                    android:background="@drawable/circle_background"
                     android:scaleType="centerCrop"
-                    android:background="@drawable/circle_background"/>
+                    android:src="@drawable/StudentProfile" />
             </LinearLayout>
 
             <!-- Search Box -->
