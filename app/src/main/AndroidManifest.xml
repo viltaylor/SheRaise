@@ -13,6 +13,42 @@
         android:theme="@style/AppTheme"
         tools:targetApi="33">
         <activity
+            android:name=".RequestPopupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RequestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JobseekerDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JobseekerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MentorDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MentorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FriendChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MentorInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BecomeMentorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FriendsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForumActivity"
+            android:exported="false" />
+        <activity
             android:name=".RequestPopup"
             android:exported="false" />
         <activity

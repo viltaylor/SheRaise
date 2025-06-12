@@ -1,0 +1,57 @@
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:orientation="vertical"-->
+<!--    android:padding="12dp">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="48dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:src="@drawable/user_placeholder"-->
+<!--            android:background="@drawable/circle_mask"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:layout_marginEnd="12dp" />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:text="Shannon Blake"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textColor="#000000" />-->
+
+<!--            <TextView-->
+<!--                android:text="@shannonb • 6/30/22"-->
+<!--                android:textSize="12sp"-->
+<!--                android:textColor="#888888" />-->
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+
+<!--    <TextView-->
+<!--        android:text="Just launched my new portfolio site. Feedback welcome!"-->
+<!--        android:textSize="14sp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginBottom="8dp" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:src="@drawable/sample_post"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:layout_marginBottom="4dp" />-->
+
+<!--    <TextView-->
+<!--        android:text="Portfolio and Design"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textColor="#999999"-->
+<!--        android:layout_marginBottom="12dp" />-->
+<!--</LinearLayout>-->
