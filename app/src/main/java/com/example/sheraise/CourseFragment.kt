@@ -56,6 +56,15 @@ class CourseFragment : Fragment() {
                 duration = "45m",
                 imageUrl = "https://via.placeholder.com/600x300",
                 category = "INTERMEDIATE"
+            ),
+            DetailedCourse(
+                title = "How to Create Your Online Course",
+                mentorName = "Dinda Smith",
+                studentCount = 320,
+                moduleCount = 4,
+                duration = "45m",
+                imageUrl = "https://via.placeholder.com/600x300",
+                category = "INTERMEDIATE"
             )
         )
         adapter.submitList(sampleCourses)
