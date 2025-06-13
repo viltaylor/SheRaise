@@ -17,7 +17,6 @@ class CourseAdapter(
 
     inner class CourseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageCourse: ImageView = itemView.findViewById(R.id.imageCourse)
-        val textTag: TextView = itemView.findViewById(R.id.textTag)
         val textTitle: TextView = itemView.findViewById(R.id.textTitle)
         val textMentorName: TextView = itemView.findViewById(R.id.textMentorName)
     }
@@ -52,11 +51,6 @@ class CourseAdapter(
 
         holder.itemView.layoutParams = layoutParams
     }
-
-
-
-
-
 
     override fun getItemCount(): Int = courses.size
 }

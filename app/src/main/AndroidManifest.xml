@@ -13,10 +13,12 @@
         android:theme="@style/AppTheme"
         tools:targetApi="33">
         <activity
-            android:name=".ForumActivity"
-            android:exported="false" />
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".RequestPopup"
+            android:name=".ForumActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
@@ -36,11 +38,6 @@
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
