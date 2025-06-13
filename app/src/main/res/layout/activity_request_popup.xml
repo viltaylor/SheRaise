@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popupContainer"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/rounded_white_card"
+    android:elevation="6dp">
+
+    <!-- Close button -->
+    <ImageView
+        android:id="@+id/btnClose"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:src="@drawable/CloseButton"
+        android:contentDescription="Close" />
+
+    <!-- Profile picture -->
+    <ImageView
+        android:id="@+id/imgStudentProfile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/StudentPic"
+        android:scaleType="centerCrop" />
+
+    <!-- Student name -->
+    <TextView
+        android:id="@+id/txtStudentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clara Mentos"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="12dp" />
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btnApprove"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Approve"
+            android:textColor="#000000"
+            android:backgroundTint="#C1EBEC"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnDecline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Decline"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#7B1E3A" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -47,7 +47,7 @@ class LoginIntroActivity : AppCompatActivity() {
                 }
                 "mentor" -> {
 //                    // TODO: Start Mentor activity
-//                    startActivity(Intent(this, MentorActivity::class.java))
+//                    startActivity(Intent(this, MentorLoginActivity::class.java))
                 }
             }
         }

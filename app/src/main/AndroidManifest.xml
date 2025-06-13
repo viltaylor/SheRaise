@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme"
         tools:targetApi="33">
         <activity
-            android:name=".ForumActivity"
+            android:name=".RequestPopup"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"

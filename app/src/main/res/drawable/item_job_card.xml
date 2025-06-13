@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp"
+    android:backgroundTintMode="src_in"
+    android:elevation="2dp"
+    android:clipToOutline="true"
+    android:layout_marginTop="6dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:backgroundTint="#D6F4F4"
+    android:layout_gravity="center"
+    android:background="@drawable/rounded_card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/slack_logo"
+            android:layout_marginEnd="12dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Product Designer"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="16sp"/>
+            <TextView
+                android:text="Slack"
+                android:textColor="#444444"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+            <TextView
+                android:text="$105k - $180k"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+            <TextView
+                android:text="Jun 16, 2021"
+                android:textColor="#0047AB"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_people"
+            android:drawablePadding="4dp"
+            android:text="113 applicants"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_location"
+            android:drawablePadding="4dp"
+            android:text="New york"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_job_type"
+            android:drawablePadding="4dp"
+            android:text="Full-time"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</LinearLayout>
