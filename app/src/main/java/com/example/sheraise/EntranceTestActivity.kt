@@ -26,7 +26,7 @@ class EntranceTestActivity : AppCompatActivity() {
 
         // Link to login screen
         findViewById<TextView>(R.id.loginLink)?.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+//            startActivity(Intent(this, LoginActivity::class.java))
         }
 
         // Start learning - navigate to learning selection screen

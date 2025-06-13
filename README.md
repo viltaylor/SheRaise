@@ -6,14 +6,14 @@
 </p>
 
 <p align="center">
-  <img src="./Wireframe/Logo SheRaise.jpg" alt="SheRaise Logo" width="150"/>
+  <img src="./Wireframe/Logo_SheRaise-removebg-preview.png" alt="SheRaise Logo" width="150"/>
 </p>
 
 
-## 🌟 About SheRaise
+## About SheRaise
 SheRaise is a mobile application designed to empower women through education, skill development, career support, and mentorship. Built using Kotlin and Android Studio, the app provides a space for women to grow professionally through courses, job-seeking features, and mentoring connections.
 
-## 🎨 Logo Meaning
+## Logo Meaning
 
 The name **SheRaise** comes from _She_ (representing women) and _Raise_ (to uplift or elevate).  
 The logo is designed to reflect:
@@ -23,9 +23,9 @@ The logo is designed to reflect:
 
 The logo communicates the core mission of SheRaise: _to help women rise, grow, and thrive._
 
-## 🚀 Features
+## Features
 
-- **🧠 Courses**
+- **Courses**
 Learn new skills through:
   - 📖 Articles
   - 📚 E-Books
@@ -35,41 +35,41 @@ Learn new skills through:
 Categories include:
 > Coding · Digital Marketing · Public Speaking · Design · Editing · and more
 
-- **👩‍🏫 Mentor**
+- **Mentor**
   - Browse mentor profiles with certifications and expertise
   - Access contact details and LinkedIn
   - Request guidance and build professional relationships
 
-- **💬 Friends**
+- **Friends**
   - Build a community of supportive women.
   - Use chat features to share and grow together.
 
-- **📌 JobSeeker**
+- **JobSeeker**
   - Discover curated job listings
   - Read full descriptions and requirements
   - Apply in-app with one click
   - Managed and verified by admin team
 
-- **👥 Role Selection**
+- **Role Selection**
   - 👩 Student: Takes entrance test, accesses learning materials
   - 🎓 Mentor: Registers, waits for approval, guides students
   - 🧑‍💼 Admin: Manages users, courses, and job listings
   - 🕶 Guest: Can view courses but with limited access
 
-## 🚧 How It Works
+## How It Works
 
 > Get started in a few simple steps:
 1. Sign up (as Guest, Student, or Mentor)
 2. Take the Entry Test (optional)
 3. Explore personalized course recommendations
-4. Learn, connect, and grow 🌱
+4. Learn, connect, and grow 
 
-## 🔄 User Flow – SheRaise App
+## User Flow – SheRaise App
 
 SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest**. Each user has a tailored journey for an optimal learning and mentoring experience.
 
 
-### 👩‍🎓 Student Flow
+### Student Flow
 
 1. **SplashScreen**  
    → Displays SheRaise logo and animation on app launch.
@@ -79,6 +79,7 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
 
 3. **Entrance Test**  
    → New users must take an entrance test. The Entrance Test assesses the user's knowledge to categorize them into Beginner, Intermediate, or Advanced level courses. The test includes 10 multiple-choice questions from basic Computer Science.
+
    → Existing users can choose to **Log In**.
 
 5. **Take Test**  
@@ -96,7 +97,7 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
    - 🤝 Friends
    - 💬 Forum
 
-### 🧑‍🏫 Mentor Flow
+### Mentor Flow
 
 1. **SplashScreen**  
    → App opens with animated logo.
@@ -121,7 +122,7 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
    - View mentee requests
    - Respond via chat
 
-### 🕊️ Guest Flow
+### Guest Flow
 
 1. **SplashScreen**  
    → Initial logo display on app launch.
@@ -136,14 +137,14 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
    - Read educational articles  
    → Prompted to sign up for full access.
  
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Language**: Kotlin
 - **IDE**: Android Studio Meerkat | 2024.3.1
 - **Database**: MySQL (optional, if backend integrated)
 - **Version Control**: GitHub
 
-## 💻 Hardware Specs
+## Hardware Specs
 
 | Component  | Specification              |
 |------------|----------------------------|
@@ -153,14 +154,14 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
 | GPU        | NVIDIA MX350               |
 | Display    | 15.6" LED Screen           |
 
-## 📷 Assets
+## Assets
 
-### 🔗 Logo
+### Logo
 <p align="center">
   <img src="./Wireframe/Logo SheRaise.jpg" alt="Wireframe" width="600"/>
 </p>
 
-### 🔗 Wireframe
+### Wireframe
 
 **Student**
 <p align="center">
@@ -205,7 +206,11 @@ SheRaise is designed with three user types: **Student**, **Mentor**, and **Guest
  <img src="./Wireframe/Mentor Course 4.jpg" alt="Mentor Course Wireframe" width="300"/>
 </p>
  
-## 👩‍💻 Developers
+## Figma
+[🔗 View SheRaise UI on Figma](https://www.figma.com/design/cjepdESBv8CZK0jUr6iDC0/SheRaise?node-id=0-1&p=f&t=6DEvKJ5ACylHDNAW-0)
+
+
+## Developers
 
 - **Josiah Owen Yoswandi**
 - **Orville Dwayne Taylor**

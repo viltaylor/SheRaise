@@ -13,9 +13,6 @@
         android:theme="@style/AppTheme"
         tools:targetApi="33">
         <activity
-            android:name=".ForumActivity"
-            android:exported="false" />
-        <activity
             android:name=".SplashActivity"
             android:exported="false" />
         <activity
@@ -29,9 +26,6 @@
             android:exported="false" />
         <activity
             android:name=".LoginIntroActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SignupActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

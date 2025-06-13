@@ -5,20 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.sheraise.adapter.DetailedCourseAdapter
-import com.example.sheraise.databinding.FragmentCourseBinding
-import com.example.sheraise.model.DetailedCourse
 
 class CourseFragment : Fragment() {
 
-    private var _binding: FragmentCourseBinding? = null
-    private val binding get() = _binding!!
-
-    private val adapter = DetailedCourseAdapter()
-
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentCourseBinding.inflate(inflater, container, false)
@@ -56,6 +48,15 @@ class CourseFragment : Fragment() {
                 duration = "45m",
                 imageUrl = "https://via.placeholder.com/600x300",
                 category = "INTERMEDIATE"
+            ),
+            DetailedCourse(
+                title = "How to Create Your Online Course",
+                mentorName = "Dinda Smith",
+                studentCount = 320,
+                moduleCount = 4,
+                duration = "45m",
+                imageUrl = "https://via.placeholder.com/600x300",
+                category = "INTERMEDIATE"
             )
         )
         adapter.submitList(sampleCourses)
@@ -64,5 +65,10 @@ class CourseFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+=======
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_course, container, false)
+>>>>>>> parent of 1646a2f (Courses)
     }
 }

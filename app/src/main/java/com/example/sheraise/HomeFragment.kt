@@ -1,11 +1,9 @@
 package com.example.sheraise
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,16 +21,8 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
-
-        // Forum button click listener
-        val btnForum = view.findViewById<ImageButton>(R.id.btnForum)
-        btnForum.setOnClickListener {
-            val intent = Intent(requireContext(), ForumActivity::class.java)
-            startActivity(intent)
-        }
-        return view
+    ): View {
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
