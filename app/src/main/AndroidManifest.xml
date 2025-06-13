@@ -34,7 +34,7 @@
             android:name=".LoginIntroActivity"
             android:exported="false" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
