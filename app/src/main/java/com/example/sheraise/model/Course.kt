@@ -1,5 +1,8 @@
 package com.example.sheraise.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
 // For homepage
 data class Course(
     val title: String,
@@ -8,14 +11,17 @@ data class Course(
 )
 
 // For course list fragment
+@Parcelize
 data class DetailedCourse(
     val title: String,
     val mentorName: String,
     val studentCount: Int,
     val moduleCount: Int,
     val duration: String,
-    val imageUrl: String,
-    val category: String
-)
+    val imageResId: Int, // ← now using drawable resource ID
+    val category: String,
+    val description: String = ""
+) : Parcelable
+
 
 

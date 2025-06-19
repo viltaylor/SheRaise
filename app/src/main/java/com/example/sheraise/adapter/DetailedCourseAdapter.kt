@@ -3,11 +3,12 @@ package com.example.sheraise.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.sheraise.databinding.ItemCourseBinding
 import com.example.sheraise.model.DetailedCourse
 
-class DetailedCourseAdapter : RecyclerView.Adapter<DetailedCourseAdapter.CourseViewHolder>() {
+class DetailedCourseAdapter(
+    private val onItemClick: (DetailedCourse) -> Unit
+) : RecyclerView.Adapter<DetailedCourseAdapter.CourseViewHolder>() {
 
     private val courseList = mutableListOf<DetailedCourse>()
 
@@ -27,9 +28,13 @@ class DetailedCourseAdapter : RecyclerView.Adapter<DetailedCourseAdapter.CourseV
             binding.modulesTextView.text = "${course.moduleCount} Modules"
             binding.durationTextView.text = course.duration
 
-            Glide.with(binding.courseImageView.context)
-                .load(course.imageUrl)
-                .into(binding.courseImageView)
+            // Local drawable image
+            binding.courseImageView.setImageResource(course.imageResId)
+
+            // Handle item click
+            binding.root.setOnClickListener {
+                onItemClick(course)
+            }
         }
     }
 
