@@ -15,7 +15,7 @@ class CourseFragment : Fragment() {
     private var _binding: FragmentCourseBinding? = null
     private val binding get() = _binding!!
 
-    private val adapter = DetailedCourseAdapter()
+    private lateinit var adapter: DetailedCourseAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,6 +27,16 @@ class CourseFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        adapter = DetailedCourseAdapter { selectedCourse ->
+            // ✅ Use the proper factory method for consistency
+            val detailedFragment = DetailedCourseFragment.newInstance(selectedCourse)
+
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, detailedFragment)
+                .addToBackStack(null)
+                .commit()
+        }
 
         setupRecyclerView()
         loadDummyCourses()
@@ -45,8 +55,9 @@ class CourseFragment : Fragment() {
                 studentCount = 500,
                 moduleCount = 5,
                 duration = "1h 30m",
-                imageUrl = "https://via.placeholder.com/600x300", // replace with real URLs
-                category = "FRONTEND"
+                imageResId = R.drawable.banner1,
+                category = "FRONTEND",
+                description = "A step-by-step beginner's guide to start your journey as a professional frontend developer."
             ),
             DetailedCourse(
                 title = "How to Create Your Online Course",
@@ -54,19 +65,22 @@ class CourseFragment : Fragment() {
                 studentCount = 320,
                 moduleCount = 4,
                 duration = "45m",
-                imageUrl = "https://via.placeholder.com/600x300",
-                category = "INTERMEDIATE"
+                imageResId = R.drawable.banner1,
+                category = "INTERMEDIATE",
+                description = "Learn to plan, record, and publish your own online courses with practical tools and strategies."
             ),
             DetailedCourse(
-                title = "How to Create Your Online Course",
+                title = "Advanced Design Thinking",
                 mentorName = "Dinda Smith",
-                studentCount = 320,
-                moduleCount = 4,
-                duration = "45m",
-                imageUrl = "https://via.placeholder.com/600x300",
-                category = "INTERMEDIATE"
+                studentCount = 120,
+                moduleCount = 6,
+                duration = "1h 15m",
+                imageResId = R.drawable.banner1,
+                category = "ADVANCED",
+                description = "Master the process of creative problem-solving and product development using design thinking."
             )
         )
+
         adapter.submitList(sampleCourses)
     }
 

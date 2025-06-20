@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5">
-
     <!-- Top App Bar -->
     <TextView
         android:id="@+id/forumTitle"
@@ -46,5 +45,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/backButton"
         app:layout_constraintVertical_bias="1.0"
-    />
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

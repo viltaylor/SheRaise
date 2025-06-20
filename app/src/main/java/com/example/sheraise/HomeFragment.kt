@@ -63,4 +63,3 @@ class HomeFragment : Fragment() {
         Mentor("Prashant Kumar", "Software Developer", "Full Stack Bootcamp", R.drawable.user_logo)
     )
 }
-
