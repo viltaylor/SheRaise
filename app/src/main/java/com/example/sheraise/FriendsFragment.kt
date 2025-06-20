@@ -6,57 +6,58 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.sheraise.adapter.FriendsAdapter
+import com.example.sheraise.databinding.FragmentFriendsBinding
 import com.example.sheraise.model.Friend
 
 class FriendsFragment : Fragment() {
 
-    private lateinit var recyclerView: RecyclerView
+    private var _binding: FragmentFriendsBinding? = null
+    private val binding get() = _binding!!
+
     private lateinit var adapter: FriendsAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_friends, container, false)
+    ): View {
+        _binding = FragmentFriendsBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        recyclerView = view.findViewById(R.id.rvFriends)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        // Dummy data
-        val friends = listOf(
-            Friend(
-                name = "Katie Mizu",
-                lastMessage = "Cool. Will let you know ASAP!",
-                imageResId = R.drawable.user_logo
-            ),
-            Friend(
-                name = "Jimoni Wong",
-                lastMessage = "Hey, where are you?",
-                imageResId = R.drawable.user_logo),
-            Friend(
-                name = "Jenny Simmone",
-                lastMessage = "Did you know who is this guy?",
-                imageResId = R.drawable.user_logo),
-            Friend(
-                name = "Danniella",
-                lastMessage = "That so cool, keep it up dude",
-                imageResId = R.drawable.user_logo),
-            Friend(
-                name = "Shaniah Drea",
-                lastMessage = "That so cool, keep it up dude",
-                imageResId =    R.drawable.user_logo)
-        )
+        adapter = FriendsAdapter(getDummyFriends()) { selectedFriend ->
+            val chatFragment = ChatFragment.newInstance(selectedFriend.name, selectedFriend.imageResId)
 
-        adapter = FriendsAdapter(friends) { friend ->
-            // TODO: Navigate to chat screen
-            // Example: startActivity(Intent(context, ChatActivity::class.java))
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, chatFragment)
+                .addToBackStack(null)
+                .commit()
         }
 
-        recyclerView.adapter = adapter
+        setupRecyclerView()
+    }
 
-        return view
+    private fun setupRecyclerView() {
+        binding.rvFriends.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvFriends.adapter = adapter
+    }
+
+    private fun getDummyFriends(): List<Friend> {
+        return listOf(
+            Friend("Katie Mizu", "Cool. Will let you know ASAP!", R.drawable.user_logo),
+            Friend("Jimoni Wong", "Hey, where are you?", R.drawable.user_logo),
+            Friend("Jenny Simmone", "Did you know who is this guy?", R.drawable.user_logo),
+            Friend("Danniella", "That so cool, keep it up dude", R.drawable.user_logo),
+            Friend("Shaniah Drea", "That so cool, keep it up dude", R.drawable.user_logo)
+        )
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
