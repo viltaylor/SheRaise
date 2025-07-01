@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -32,6 +31,7 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), ForumActivity::class.java)
             startActivity(intent)
         }
+
         return view
     }
 
@@ -40,16 +40,24 @@ class HomeFragment : Fragment() {
 
         // Setup Continue Courses
         val recyclerContinue = view.findViewById<RecyclerView>(R.id.recyclerContinue)
-        recyclerContinue.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        recyclerContinue.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
         courseAdapter = CourseAdapter(getDummyCourses()) { /* no-op */ }
         recyclerContinue.adapter = courseAdapter
 
-        // Setup Mentors
+        // Setup Mentors Carousel
         val recyclerMentor = view.findViewById<RecyclerView>(R.id.recyclerMentor)
-        recyclerMentor.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        mentorAdapter = MentorAdapter(getDummyMentors()) { mentor ->
-            Toast.makeText(requireContext(), "Clicked: ${mentor.name}", Toast.LENGTH_SHORT).show()
-        }
+        recyclerMentor.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
+        mentorAdapter = MentorAdapter(
+            getDummyMentors(),
+            onDetailsClick = { mentor ->
+                // Optionally navigate to a detailed mentor screen
+            },
+            isFullList = false // This enables carousel spacing
+        )
         recyclerMentor.adapter = mentorAdapter
     }
 
@@ -59,7 +67,24 @@ class HomeFragment : Fragment() {
     )
 
     private fun getDummyMentors(): List<Mentor> = listOf(
-        Mentor("Dinda Smith", "Frontend Developer", "Frontend Dev Course", R.drawable.user_logo),
-        Mentor("Prashant Kumar", "Software Developer", "Full Stack Bootcamp", R.drawable.user_logo)
+        Mentor(
+            name = "Dinda Smith",
+            role = "Frontend Developer",
+            courseTitle = "Beginner's Guide to Frontend",
+            profileImageResId = R.drawable.user_logo,
+            tags = "Bachelors",
+            rating = 4.8f,
+            bio = "Dinda has 5 years of experience building responsive web apps."
+        ),
+        Mentor(
+            name = "Prashant Kumar",
+            role = "Full Stack Developer",
+            courseTitle = "Full Stack Bootcamp",
+            profileImageResId = R.drawable.user_logo,
+            tags = "UI Designer",
+            rating = 4.6f,
+            bio = "Prashant specializes in scalable web systems and RESTful APIs."
+        )
     )
+
 }
