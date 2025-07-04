@@ -4,11 +4,12 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 // For homepage
+@Parcelize
 data class Course(
     val title: String,
     val mentorName: String,
     val imageResId: Int
-)
+): Parcelable
 
 // For course list fragment
 @Parcelize

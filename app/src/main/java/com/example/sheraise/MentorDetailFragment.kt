@@ -46,11 +46,16 @@ class MentorDetailFragment : Fragment() {
 
         mentor?.let {
             binding.textMentorName.text = it.name
-            binding.textMentorRole.text = it.role
-            binding.textCourseTitle.text = it.courseTitle
+            binding.tvTags.text = it.tags
+            binding.tvRating.text = "⭐ ${it.rating}"
+            binding.tvBio.text = it.bio
             binding.mentorImage.setImageResource(it.profileImageResId)
+            binding.backButton.setOnClickListener {
+                parentFragmentManager.popBackStack()
+            }
         }
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

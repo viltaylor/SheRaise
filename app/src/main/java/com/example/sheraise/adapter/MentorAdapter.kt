@@ -47,9 +47,16 @@ class MentorAdapter(
         holder.textCourseTitle?.text = mentor.courseTitle
         holder.ratingText?.text = "4.9"
         holder.tagText?.text = mentor.tags
+        // Make whole item clickable
+        holder.itemView.setOnClickListener {
+            onDetailsClick(mentor)
+        }
+
+// If there's a button (like in item_mentor), make that clickable too
         holder.btnShowDetails?.setOnClickListener {
             onDetailsClick(mentor)
         }
+
 
         val layoutParams = holder.itemView.layoutParams as? ViewGroup.MarginLayoutParams
         if (layoutParams != null) {

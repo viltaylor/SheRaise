@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.sheraise.adapter.CourseAdapter
 import com.example.sheraise.adapter.MentorAdapter
 import com.example.sheraise.model.Course
+import com.example.sheraise.model.DetailedCourse
 import com.example.sheraise.model.Mentor
 
 class HomeFragment : Fragment() {
@@ -43,7 +44,25 @@ class HomeFragment : Fragment() {
         recyclerContinue.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
-        courseAdapter = CourseAdapter(getDummyCourses()) { /* no-op */ }
+        courseAdapter = CourseAdapter(getDummyCourses()) { selectedCourse ->
+            val detailedCourse = DetailedCourse(
+                title = selectedCourse.title,
+                mentorName = selectedCourse.mentorName,
+                studentCount = 100, // or 0/default
+                moduleCount = 5,
+                duration = "1h 30m",
+                imageResId = selectedCourse.imageResId,
+                category = "FRONTEND",
+                description = "This is a basic course overview for beginners."
+            )
+
+            val detailedFragment = DetailedCourseFragment.newInstance(detailedCourse)
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, detailedFragment)
+                .addToBackStack(null)
+                .commit()
+        }
+
         recyclerContinue.adapter = courseAdapter
 
         // Setup Mentors Carousel
@@ -54,12 +73,17 @@ class HomeFragment : Fragment() {
         mentorAdapter = MentorAdapter(
             getDummyMentors(),
             onDetailsClick = { mentor ->
-                // Optionally navigate to a detailed mentor screen
+                val mentorDetailFragment = MentorDetailFragment.newInstance(mentor)
+                parentFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainer, mentorDetailFragment)
+                    .addToBackStack(null)
+                    .commit()
             },
             isFullList = false // This enables carousel spacing
         )
         recyclerMentor.adapter = mentorAdapter
     }
+
 
     private fun getDummyCourses(): List<Course> = listOf(
         Course("Learn Software Dev", "Dinda Smith", R.drawable.banner1),
@@ -70,7 +94,7 @@ class HomeFragment : Fragment() {
         Mentor(
             name = "Dinda Smith",
             role = "Frontend Developer",
-            courseTitle = "Beginner's Guide to Frontend",
+            courseTitle = "Beginner's Frontend Guide",
             profileImageResId = R.drawable.user_logo,
             tags = "Bachelors",
             rating = 4.8f,
