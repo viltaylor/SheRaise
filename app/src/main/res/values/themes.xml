@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Base application theme using Material Components -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Splash screen background -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_background</item>
-
-        <!-- Optional splash attributes (Material-compatible) -->
         <item name="android:windowSplashScreenBackground">@color/white</item>
         <item name="android:windowSplashScreenIconBackgroundColor">@android:color/transparent</item>
-
-        <!-- Customize primary colors if needed -->
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryVariant">@color/primary_dark</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/secondary</item>
-        <item name="colorOnSecondary">@color/white</item>
     </style>
-
 </resources>
