@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     id("kotlin-parcelize")
     id("org.jetbrains.kotlin.kapt")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -63,6 +64,21 @@ dependencies {
     implementation(libs.androidx.annotation)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    dependencies {
+        // Firebase BoM (manages versions automatically)
+        implementation(platform("com.google.firebase:firebase-bom:32.7.3"))
+
+        // Firebase Authentication
+        implementation("com.google.firebase:firebase-auth-ktx")
+
+        // Firebase Firestore
+        implementation("com.google.firebase:firebase-firestore-ktx")
+
+        // Optional: Firebase Analytics (for tracking)
+        implementation("com.google.firebase:firebase-analytics-ktx")
+    }
+
 
     implementation("com.github.bumptech.glide:glide:4.16.0")
     kapt("com.github.bumptech.glide:compiler:4.16.0")

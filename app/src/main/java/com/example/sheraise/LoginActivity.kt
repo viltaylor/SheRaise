@@ -2,13 +2,13 @@ package com.example.sheraise
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
 
     private lateinit var emailLogin: EditText
     private lateinit var passwordLogin: EditText
@@ -19,7 +19,10 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login) // Ensure this is your correct layout file
+        setContentView(R.layout.activity_login)
+
+        // Initialize Firebase Auth
+        auth = FirebaseAuth.getInstance()
 
         // Initialize views
         emailLogin = findViewById(R.id.emailLogin)
@@ -37,10 +40,7 @@ class LoginActivity : AppCompatActivity() {
             if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Please enter email and password", Toast.LENGTH_SHORT).show()
             } else {
-                // Dummy success – replace with actual auth logic
-                Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, HomeActivity::class.java))
-                finish()
+                loginUser(email, password)
             }
         }
 
@@ -58,7 +58,22 @@ class LoginActivity : AppCompatActivity() {
 
         // Sign up navigation
         txtSignup.setOnClickListener {
-            startActivity(Intent(this, SignUpActivity::class.java)) // Replace with your sign-up activity
+            startActivity(Intent(this, SignUpActivity::class.java))
         }
+    }
+
+    private fun loginUser(email: String, password: String) {
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Success
+                    Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, HomeActivity::class.java))
+                    finish()
+                } else {
+                    // Failure
+                    Toast.makeText(this, "Login failed: ${task.exception?.message}", Toast.LENGTH_LONG).show()
+                }
+            }
     }
 }

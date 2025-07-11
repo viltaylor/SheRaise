@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "780671978113",
+    "project_id": "sheraise-c8bb4",
+    "storage_bucket": "sheraise-c8bb4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780671978113:android:f356e0d026fb714d999b80",
+        "android_client_info": {
+          "package_name": "com.example.sheraise"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB52s3E2KnMNub50TXXppxBSmWKoaA_gFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

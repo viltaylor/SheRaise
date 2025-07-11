@@ -76,7 +76,7 @@
         <EditText
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
-            android:layout_height="48"
+            android:layout_height="48dp"
             android:background="@drawable/edittext_border"
             android:hint="shannon@gmail.com"
             android:paddingHorizontal="12dp"
