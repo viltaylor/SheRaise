@@ -32,6 +32,11 @@ class ChatFragment : Fragment() {
 
         tvName.text = friendName
         imageResId?.let { imgProfile.setImageResource(it) }
+
+        val backButton = view.findViewById<ImageView>(R.id.backButton)
+        backButton.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
     }
 
     companion object {

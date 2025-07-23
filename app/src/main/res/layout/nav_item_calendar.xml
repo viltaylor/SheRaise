@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navCalendar"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true">
+
+    <FrameLayout
+        android:id="@+id/navCalendarCircle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:visibility="visible"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/navCalendarIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/calendar_nav"
+            app:tint="@color/white" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/navCalendarLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calendar"
+        android:textColor="@color/pink"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp"
+        android:visibility="visible"/>
+</LinearLayout>
