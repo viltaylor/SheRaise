@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customBottomNav"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="8dp"
+    android:elevation="10dp">
+
+    <include layout="@layout/nav_item_home"/>
+    <include layout="@layout/nav_item_course"/>
+    <include layout="@layout/nav_item_friends"/>
+    <include layout="@layout/nav_item_request"/>
+    <include layout="@layout/nav_item_calendar"/>
+
+</LinearLayout>

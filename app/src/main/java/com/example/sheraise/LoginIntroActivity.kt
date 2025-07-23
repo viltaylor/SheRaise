@@ -42,12 +42,10 @@ class LoginIntroActivity : AppCompatActivity() {
         confirmButton.setOnClickListener {
             when (selectedRole) {
                 "student" -> {
-                    // TODO: Start Student activity
                     startActivity(Intent(this, EntranceTestActivity::class.java))
                 }
                 "mentor" -> {
-//                    // TODO: Start Mentor activity
-//                    startActivity(Intent(this, MentorLoginActivity::class.java))
+                    startActivity(Intent(this, LoginMentorActivity::class.java))
                 }
             }
         }
