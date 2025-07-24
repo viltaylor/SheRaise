@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:background="@drawable/shadow_bg"
+    android:elevation="6dp">
+
+    <RadioGroup
+        android:id="@+id/radioGroupReasons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schedule full" />
+
+        <RadioButton
+            android:id="@+id/radioNotCompatible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not compatible" />
+
+        <RadioButton
+            android:id="@+id/radioOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etOtherReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type your reason"
+        android:visibility="gone"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnSubmitReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F9638C"
+        android:textColor="@android:color/white" />
+</LinearLayout>
