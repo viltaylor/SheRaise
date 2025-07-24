@@ -4,101 +4,122 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
+import android.widget.RadioGroup
+import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.sheraise.adapter.MentorAdapter
-import com.example.sheraise.databinding.FragmentMentorBinding
-import com.example.sheraise.model.Mentor
+import com.example.sheraise.adapter.RequestAdapter
+import com.example.sheraise.databinding.FragmentRequestBinding
+import com.example.sheraise.model.Student
 
 class RequestMentorFragment : Fragment() {
-    private var _binding: FragmentMentorBinding? = null
+    private var _binding: FragmentRequestBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var mentorAdapter: MentorAdapter
+    private lateinit var requestAdapter: RequestAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentMentorBinding.inflate(inflater, container, false)
+        _binding = FragmentRequestBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Initialize MentorAdapter for full vertical list
-        mentorAdapter = MentorAdapter(
-            mentors = getDummyMentors(),
-            onDetailsClick = { mentor ->
-                val mentorDetailFragment = MentorDetailFragment.newInstance(mentor)
-                parentFragmentManager.beginTransaction()
-                    .replace(R.id.fragmentContainer, mentorDetailFragment)
-                    .addToBackStack(null)
-                    .commit()
-            },
-            isFullList = true // ✅ important to trigger full-list layout behavior
+        requestAdapter = RequestAdapter(
+            students = getDummyStudents(),
+            onDetailsClick = { student ->
+                showRequestPopup(student)
+            }
         )
 
         // Set up RecyclerView with vertical layout
-        binding.rvMentors.apply {
+        binding.rvRequest.apply {
             layoutManager = LinearLayoutManager(requireContext())
-            adapter = mentorAdapter
+            adapter = requestAdapter
         }
     }
 
     // Sample mentor data
-    private fun getDummyMentors(): List<Mentor> = listOf(
-        Mentor(
+    private fun getDummyStudents(): List<Student> = listOf(
+        Student(
             name = "Dinda Smith",
-            role = "Frontend Developer",
-            courseTitle = "Frontend Dev Course",
+            role = "Student",
             profileImageResId = R.drawable.user_logo,
-            tags = "Bachelor",
-            rating = 4.5f,
-            bio = """
-            Relevant Certification: Certified Web Developer
-            Employment History: Frontend Engineer at Gojek
-
-            Email: dinda.smith@example.com
-            Phone: +62 812-3456-7890
-            LinkedIn: linkedin.com/in/dindasmith
-        """.trimIndent(),
         ),
-        Mentor(
+        Student(
             name = "Prashant Kumar",
-            role = "Software Developer",
-            courseTitle = "Full Stack Bootcamp",
+            role = "Student",
             profileImageResId = R.drawable.user_logo,
-            tags = "Expert",
-            rating = 4.8f,
-            bio = """
-            Relevant Certification: Java & Spring Expert
-            Employment History: Backend Lead at Tokopedia
-
-            Email: prashant.k@example.com
-            Phone: +62 813-2345-6789
-            LinkedIn: linkedin.com/in/prashantk
-        """.trimIndent(),
         ),
-        Mentor(
+        Student(
             name = "Alisa Ray",
-            role = "UX Designer",
-            courseTitle = "Design Thinking Essentials",
+            role = "Student",
             profileImageResId = R.drawable.user_logo,
-            tags = "Specialist",
-            rating = 4.6f,
-            bio = """
-            Relevant Certification: UI/UX Mastery
-            Employment History: Senior UX Designer at Grab
-
-            Email: alisa.ray@example.com
-            Phone: +62 819-8765-4321
-            LinkedIn: linkedin.com/in/alisaray
-        """.trimIndent(),
         )
     )
 
+    private fun showRequestPopup(student: Student) {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_request_action, null)
+        val dialog = androidx.appcompat.app.AlertDialog.Builder(requireContext())
+            .setView(dialogView)
+            .create()
+
+        val imgStudent = dialogView.findViewById<ImageView>(R.id.imgStudent)
+        val tvName = dialogView.findViewById<TextView>(R.id.tvStudentName)
+        val btnApprove = dialogView.findViewById<Button>(R.id.btnApprove)
+        val btnDecline = dialogView.findViewById<Button>(R.id.btnDecline)
+
+        imgStudent.setImageResource(student.profileImageResId)
+        tvName.text = student.name
+
+        btnApprove.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        btnDecline.setOnClickListener {
+            dialog.dismiss()
+            showDeclineReasonPopup()
+        }
+
+        dialog.show()
+    }
+
+    private fun showDeclineReasonPopup() {
+        val declineView = layoutInflater.inflate(R.layout.dialog_decline_reason, null)
+        val declineDialog = androidx.appcompat.app.AlertDialog.Builder(requireContext())
+            .setView(declineView)
+            .create()
+
+        val radioGroup = declineView.findViewById<RadioGroup>(R.id.radioGroupReasons)
+        val etOther = declineView.findViewById<EditText>(R.id.etOtherReason)
+        val btnSubmit = declineView.findViewById<Button>(R.id.btnSubmitReason)
+
+        radioGroup.setOnCheckedChangeListener { _, checkedId ->
+            etOther.visibility = if (checkedId == R.id.radioOther) View.VISIBLE else View.GONE
+        }
+
+        btnSubmit.setOnClickListener {
+            val selectedReason = when (radioGroup.checkedRadioButtonId) {
+                R.id.radioSchedule -> "Schedule full"
+                R.id.radioNotCompatible -> "Not compatible"
+                R.id.radioOther -> etOther.text.toString()
+                else -> "No reason selected"
+            }
+
+            declineDialog.dismiss()
+            Toast.makeText(requireContext(), "Declined with reason: $selectedReason", Toast.LENGTH_SHORT).show()
+        }
+
+        declineDialog.show()
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
