@@ -22,7 +22,6 @@
             android:layout_weight="1"
             android:text="Request"
             android:textSize="20sp"
-            android:textColor="@color/black2"
             android:textStyle="bold"
             android:gravity="center" />
     </LinearLayout>

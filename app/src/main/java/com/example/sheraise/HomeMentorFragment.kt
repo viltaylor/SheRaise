@@ -24,7 +24,7 @@ class HomeMentorFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_home_mentor, container, false)
 
         // Forum button click listener
         val btnForum = view.findViewById<ImageButton>(R.id.btnForum)
@@ -40,8 +40,8 @@ class HomeMentorFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Setup Continue Courses
-        val recyclerContinue = view.findViewById<RecyclerView>(R.id.recyclerContinue)
-        recyclerContinue.layoutManager =
+        val recyclerRecent = view.findViewById<RecyclerView>(R.id.recyclerRecent)
+        recyclerRecent.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         courseAdapter = CourseAdapter(getDummyCourses()) { selectedCourse ->
@@ -63,11 +63,11 @@ class HomeMentorFragment : Fragment() {
                 .commit()
         }
 
-        recyclerContinue.adapter = courseAdapter
+        recyclerRecent.adapter = courseAdapter
 
         // Setup Mentors Carousel
-        val recyclerMentor = view.findViewById<RecyclerView>(R.id.recyclerMentor)
-        recyclerMentor.layoutManager =
+        val recyclerMentorship = view.findViewById<RecyclerView>(R.id.recyclerMentorship)
+        recyclerMentorship.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         mentorAdapter = MentorAdapter(
@@ -81,7 +81,7 @@ class HomeMentorFragment : Fragment() {
             },
             isFullList = false // This enables carousel spacing
         )
-        recyclerMentor.adapter = mentorAdapter
+        recyclerMentorship.adapter = mentorAdapter
     }
 
 
