@@ -1,31 +1,35 @@
 package com.example.sheraise
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.core.net.toUri
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.sheraise.adapter.ScheduleAdapter
+import com.example.sheraise.model.ScheduleItem
 
 class CalendarMentorFragment : Fragment() {
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_jobs, container, false)
+        return inflater.inflate(R.layout.fragment_calendar, container, false)
+    }
 
-        val jobUrl = "https://id.jobstreet.com/" // ✅ Replace with your preferred job site
-        val btnFindJob = view.findViewById<Button>(R.id.btnFindJob)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val recyclerView = view.findViewById<RecyclerView>(R.id.rvCalendar)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        btnFindJob.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(jobUrl))
-            startActivity(intent)
-        }
+        val scheduleList = listOf(
+            ScheduleItem("Mentor Session", "27 Jul 2025"),
+            ScheduleItem("Assignment Review", "30 Jul 2025"),
+            ScheduleItem("Open Q&A", "01 Aug 2025")
+        )
 
-        return view
+        recyclerView.adapter = ScheduleAdapter(scheduleList)
     }
 }

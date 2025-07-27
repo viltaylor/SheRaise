@@ -65,6 +65,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
+
     dependencies {
         // Firebase BoM (manages versions automatically)
         implementation(platform("com.google.firebase:firebase-bom:32.7.3"))
@@ -78,8 +79,6 @@ dependencies {
         // Optional: Firebase Analytics (for tracking)
         implementation("com.google.firebase:firebase-analytics-ktx")
     }
-
-
     implementation("com.github.bumptech.glide:glide:4.16.0")
     kapt("com.github.bumptech.glide:compiler:4.16.0")
 
