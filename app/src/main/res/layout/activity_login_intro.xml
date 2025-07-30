@@ -169,6 +169,7 @@
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:background="@drawable/confirm_button"
+        app:backgroundTint="@null"
         android:elevation="6dp"
         android:visibility="invisible"
         android:alpha="0"

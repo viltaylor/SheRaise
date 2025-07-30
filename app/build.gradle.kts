@@ -48,7 +48,9 @@ android {
 }
 
 dependencies {
+    implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.core:core-splashscreen:1.0.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -65,20 +67,24 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
-    dependencies {
+    implementation("com.google.firebase:firebase-storage-ktx")
+
+    implementation("com.google.firebase:firebase-storage:20.3.0")
         // Firebase BoM (manages versions automatically)
         implementation(platform("com.google.firebase:firebase-bom:32.7.3"))
 
         // Firebase Authentication
         implementation("com.google.firebase:firebase-auth-ktx")
+        // Firebase Auth
+        implementation("com.google.firebase:firebase-auth:22.3.0")
 
         // Firebase Firestore
         implementation("com.google.firebase:firebase-firestore-ktx")
 
         // Optional: Firebase Analytics (for tracking)
         implementation("com.google.firebase:firebase-analytics-ktx")
-    }
 
+    implementation("com.squareup.picasso:picasso:2.8")
 
     implementation("com.github.bumptech.glide:glide:4.16.0")
     kapt("com.github.bumptech.glide:compiler:4.16.0")

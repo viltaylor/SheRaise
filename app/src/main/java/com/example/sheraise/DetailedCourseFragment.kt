@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import com.example.sheraise.adapter.ViewPagerAdapter
 import com.example.sheraise.databinding.FragmentDetailedCourseBinding
-import com.example.sheraise.model.DetailedCourse
+import com.example.sheraise.model.Course
 import com.google.android.material.tabs.TabLayoutMediator
 
 class DetailedCourseFragment : Fragment() {
@@ -15,12 +16,12 @@ class DetailedCourseFragment : Fragment() {
     private var _binding: FragmentDetailedCourseBinding? = null
     private val binding get() = _binding!!
 
-    private var course: DetailedCourse? = null
+    private var course: Course? = null
 
     companion object {
         private const val ARG_COURSE = "arg_course"
 
-        fun newInstance(course: DetailedCourse): DetailedCourseFragment {
+        fun newInstance(course: Course): DetailedCourseFragment {
             val fragment = DetailedCourseFragment()
             val bundle = Bundle()
             bundle.putParcelable(ARG_COURSE, course)
@@ -44,7 +45,6 @@ class DetailedCourseFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         setupTopContent()
         setupTabs()
         setupBackButton()
@@ -54,12 +54,16 @@ class DetailedCourseFragment : Fragment() {
         course?.let { course ->
             binding.courseTitleTextView.text = course.title
             binding.mentorNameTextView.text = course.mentorName
-            binding.mentorRoleTextView.text = "Software Developer" // Customize if needed
-            binding.ratingTextView.text = "⭐ 4.5 (500 Reviews)" // Static or dynamic
-            binding.levelTextView.text = "Master 🔥" // Static or from model
-            binding.studentCountTextView.text = "👥 ${course.studentCount} Student"
-            binding.moduleCountTextView.text = "📚 ${course.moduleCount} Modul"
-            binding.durationTextView.text = "⏰ ${course.duration}"
+            binding.mentorRoleTextView.text = "Software Developer" // placeholder
+            binding.ratingTextView.text = "⭐ 4.5 (500 Reviews)"    // static or optional
+            binding.levelTextView.text = "Master 🔥"               // static or optional
+            binding.studentCountTextView.text = "👥 100 Student"
+            binding.moduleCountTextView.text = "📚 5 Modul"
+            binding.durationTextView.text = "⏰ 1h 30m"
+
+            Glide.with(this)
+                .load(course.imageUrl)
+                .into(binding.courseImageView) // Make sure your layout includes this ImageView
         }
     }
 

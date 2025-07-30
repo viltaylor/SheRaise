@@ -25,7 +25,7 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        // Init Firebase
+        // Firebase initialization
         auth = FirebaseAuth.getInstance()
         firestore = FirebaseFirestore.getInstance()
 
@@ -38,17 +38,15 @@ class SignUpActivity : AppCompatActivity() {
         googleSignUpButton = findViewById(R.id.btnGoogleSignUp)
         loginText = findViewById(R.id.txtLogin)
 
-        // Sign up button click
-        signUpButton.setOnClickListener {
-            handleSignUp()
-        }
+        // Sign up action
+        signUpButton.setOnClickListener { handleSignUp() }
 
-        // Google Sign Up (dummy)
+        // Google Sign Up placeholder
         googleSignUpButton.setOnClickListener {
             Toast.makeText(this, "Google Sign Up coming soon!", Toast.LENGTH_SHORT).show()
         }
 
-        // Already have account → go to Login
+        // Navigate to Login screen
         loginText.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
@@ -61,7 +59,7 @@ class SignUpActivity : AppCompatActivity() {
         val password = passwordEditText.text.toString().trim()
         val confirmPassword = confirmPasswordEditText.text.toString().trim()
 
-        // Validation checks
+        // Input validation
         if (name.isEmpty()) {
             nameEditText.error = "Name is required"
             nameEditText.requestFocus()
@@ -86,7 +84,7 @@ class SignUpActivity : AppCompatActivity() {
             return
         }
 
-        // Register user in Firebase Auth
+        // Firebase Auth sign-up
         auth.createUserWithEmailAndPassword(email, password)
             .addOnSuccessListener {
                 val uid = auth.currentUser?.uid
@@ -95,11 +93,12 @@ class SignUpActivity : AppCompatActivity() {
                         "uid" to uid,
                         "name" to name,
                         "email" to email,
-                        "role" to "user" // You can change this to "mentor", etc. later
+                        "role" to "user" // default role
                     )
 
-                    // Save user info to Firestore
-                    firestore.collection("users").document(uid)
+                    // Store user data in Firestore
+                    firestore.collection("users")
+                        .document(uid)
                         .set(userMap)
                         .addOnSuccessListener {
                             Toast.makeText(this, "Account created successfully!", Toast.LENGTH_SHORT).show()
@@ -107,12 +106,14 @@ class SignUpActivity : AppCompatActivity() {
                             finish()
                         }
                         .addOnFailureListener { e ->
-                            Toast.makeText(this, "Failed to save user: ${e.message}", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, "Error saving user to Firestore: ${e.message}", Toast.LENGTH_LONG).show()
                         }
+                } else {
+                    Toast.makeText(this, "User ID is null after sign-up", Toast.LENGTH_LONG).show()
                 }
             }
             .addOnFailureListener { e ->
-                Toast.makeText(this, "Sign up failed: ${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Sign up failed: ${e.message}", Toast.LENGTH_LONG).show()
             }
     }
 }

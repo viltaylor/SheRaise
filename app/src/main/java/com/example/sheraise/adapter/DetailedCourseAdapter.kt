@@ -3,16 +3,18 @@ package com.example.sheraise.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.example.sheraise.R
 import com.example.sheraise.databinding.ItemCourseBinding
-import com.example.sheraise.model.DetailedCourse
+import com.example.sheraise.model.Course
 
 class DetailedCourseAdapter(
-    private val onItemClick: (DetailedCourse) -> Unit
+    private val onItemClick: (Course) -> Unit
 ) : RecyclerView.Adapter<DetailedCourseAdapter.CourseViewHolder>() {
 
-    private val courseList = mutableListOf<DetailedCourse>()
+    private val courseList = mutableListOf<Course>()
 
-    fun submitList(list: List<DetailedCourse>) {
+    fun submitList(list: List<Course>) {
         courseList.clear()
         courseList.addAll(list)
         notifyDataSetChanged()
@@ -21,17 +23,19 @@ class DetailedCourseAdapter(
     inner class CourseViewHolder(private val binding: ItemCourseBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(course: DetailedCourse) {
+        fun bind(course: Course) {
             binding.titleTextView.text = course.title
             binding.mentorNameTextView.text = course.mentorName
-            binding.studentsTextView.text = "${course.studentCount} Students"
-            binding.modulesTextView.text = "${course.moduleCount} Modules"
-            binding.durationTextView.text = course.duration
+            binding.studentsTextView.text = "👥 100 Students"
+            binding.modulesTextView.text = "📚 5 Modules"
+            binding.durationTextView.text = "⏰ 1h 30m"
 
-            // Local drawable image
-            binding.courseImageView.setImageResource(course.imageResId)
+            // ✅ Load image from Firestore URL using Glide
+            Glide.with(binding.root.context)
+                .load(course.imageUrl)
+                .placeholder(R.drawable.banner1) // fallback image
+                .into(binding.courseImageView)
 
-            // Handle item click
             binding.root.setOnClickListener {
                 onItemClick(course)
             }

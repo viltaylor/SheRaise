@@ -7,13 +7,21 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.sheraise.R
 import com.example.sheraise.model.Course
 
 class CourseAdapter(
-    private val courses: List<Course>,
     private val onItemClick: (Course) -> Unit
 ) : RecyclerView.Adapter<CourseAdapter.CourseViewHolder>() {
+
+    private val courses = mutableListOf<Course>()
+
+    fun submitList(newCourses: List<Course>) {
+        courses.clear()
+        courses.addAll(newCourses)
+        notifyDataSetChanged()
+    }
 
     inner class CourseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageCourse: ImageView = itemView.findViewById(R.id.imageCourse)
@@ -22,8 +30,8 @@ class CourseAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CourseViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_continue, parent, false)
-
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_continue, parent, false)
         return CourseViewHolder(view)
     }
 
@@ -35,21 +43,29 @@ class CourseAdapter(
         val course = courses[position]
         holder.textTitle.text = course.title
         holder.textMentorName.text = course.mentorName
-        holder.imageCourse.setImageResource(course.imageResId)
+
+        // Load image from URL
+        Glide.with(holder.itemView.context)
+            .load(course.imageUrl)
+            .placeholder(R.drawable.banner1) // fallback image
+            .into(holder.imageCourse)
 
         holder.itemView.setOnClickListener {
             onItemClick(course)
         }
 
-        val layoutParams = holder.itemView.layoutParams as ViewGroup.MarginLayoutParams
-        val context = holder.itemView.context
-        val sideMargin = context.dpToPx(8)
-        val edgePadding = context.dpToPx(8)
+        // Add margin if used in horizontal carousel
+        val layoutParams = holder.itemView.layoutParams
+        if (layoutParams is ViewGroup.MarginLayoutParams) {
+            val context = holder.itemView.context
+            val sideMargin = context.dpToPx(8)
+            val edgePadding = context.dpToPx(8)
 
-        layoutParams.marginStart = if (position == 0) edgePadding else sideMargin
-        layoutParams.marginEnd = if (position == itemCount - 1) edgePadding else 0
+            layoutParams.marginStart = if (position == 0) edgePadding else sideMargin
+            layoutParams.marginEnd = if (position == itemCount - 1) edgePadding else 0
 
-        holder.itemView.layoutParams = layoutParams
+            holder.itemView.layoutParams = layoutParams
+        }
     }
 
     override fun getItemCount(): Int = courses.size

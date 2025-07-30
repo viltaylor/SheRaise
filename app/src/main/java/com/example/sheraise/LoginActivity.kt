@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class LoginActivity : AppCompatActivity() {
 
@@ -63,17 +64,41 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun loginUser(email: String, password: String) {
+        val auth = FirebaseAuth.getInstance()
+        val firestore = FirebaseFirestore.getInstance()
+
         auth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    // Success
-                    Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this, HomeActivity::class.java))
-                    finish()
+            .addOnSuccessListener { authResult ->
+                val uid = auth.currentUser?.uid
+
+                if (uid != null) {
+                    firestore.collection("users").document(uid).get()
+                        .addOnSuccessListener { document ->
+                            if (document.exists()) {
+                                val name = document.getString("name")
+                                val role = document.getString("role")
+
+                                Toast.makeText(this, "Welcome $name!", Toast.LENGTH_SHORT).show()
+
+                                val intent = Intent(this, HomeActivity::class.java)
+                                intent.putExtra("role", role)
+                                startActivity(intent)
+                                finish()
+                            } else {
+                                Toast.makeText(this, "User data not found in Firestore", Toast.LENGTH_LONG).show()
+                            }
+                        }
+                        .addOnFailureListener { e ->
+                            Toast.makeText(this, "Failed to load user info: ${e.message}", Toast.LENGTH_LONG).show()
+                        }
                 } else {
-                    // Failure
-                    Toast.makeText(this, "Login failed: ${task.exception?.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "User ID not found", Toast.LENGTH_LONG).show()
                 }
             }
+            .addOnFailureListener { e ->
+                Toast.makeText(this, "Login failed: ${e.message}", Toast.LENGTH_LONG).show()
+            }
     }
+
+
 }

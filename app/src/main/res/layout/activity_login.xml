@@ -135,7 +135,7 @@
             android:textStyle="bold" />
 
         <!-- Google Button -->
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnGoogle"
             android:layout_gravity="center"
             android:layout_width="200dp"
@@ -143,7 +143,8 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/rounded_white_button"
             android:text="Login With Google"
-            android:textColor="#000000" />
+            app:backgroundTint="@null"
+            android:textColor="@color/black" />
 
         <!-- Guest Button -->
         <Button
@@ -154,7 +155,8 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/rounded_white_button"
             android:text="Login As Guest"
-            android:textColor="#000000" />
+            app:backgroundTint="@null"
+            android:textColor="@color/black" />
     </LinearLayout>
 
 </LinearLayout>
