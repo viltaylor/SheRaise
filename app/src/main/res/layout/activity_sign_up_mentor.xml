@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/signupRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:weightSum="1">
+
+    <!-- Top Logo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/mentorlogo"
+        android:contentDescription="Logo" />
+
+    <!-- Main Signup Card -->
+    <LinearLayout
+        android:id="@+id/signupFormContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:paddingHorizontal="32dp"
+        android:background="@drawable/top_rounded_card">
+
+        <!-- Handle bar -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/edittext_border"
+            android:hint="Your name"
+            android:paddingHorizontal="12dp"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/edittext_border"
+            android:hint="shannon@gmail.com"
+            android:paddingHorizontal="12dp"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Password -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Input Password"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/edittext_border"
+            android:hint="Password"
+            android:paddingHorizontal="12dp"
+            android:inputType="textPassword"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Confirm Password -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/editTextConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/edittext_border"
+            android:hint="Confirm Password"
+            android:paddingHorizontal="12dp"
+            android:inputType="textPassword"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Already have account? -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an Account?"
+                android:textSize="14sp"
+                android:textColor="#222222" />
+
+            <TextView
+                android:id="@+id/txtLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Login"
+                android:textSize="14sp"
+                android:textColor="@color/pink"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Sign Up Button -->
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/rounded_dark_button"
+            android:text="Sign Up"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Google Sign Up -->
+        <Button
+            android:id="@+id/btnGoogleSignUp"
+            android:layout_width="220dp"
+            android:layout_gravity="center"
+            android:layout_height="48dp"
+            android:text="Login With Google 🔘"
+            android:textColor="#000000"
+            android:background="@drawable/rounded_white_button"
+            app:backgroundTint="@null"
+            />
+    </LinearLayout>
+</LinearLayout>

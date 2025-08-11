@@ -19,7 +19,7 @@ class LoginMentorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_login_mentor)
 
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
@@ -58,7 +58,7 @@ class LoginMentorActivity : AppCompatActivity() {
 
         // Sign up navigation
         txtSignup.setOnClickListener {
-            startActivity(Intent(this, SignUpActivity::class.java))
+            startActivity(Intent(this, SignUpMentorActivity::class.java))
         }
     }
 
