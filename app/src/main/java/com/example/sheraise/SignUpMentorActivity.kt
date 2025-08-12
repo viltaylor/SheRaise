@@ -48,7 +48,7 @@ class SignUpMentorActivity : AppCompatActivity() {
 
         // Navigate to Login screen
         loginText.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, LoginMentorActivity::class.java))
             finish()
         }
     }
