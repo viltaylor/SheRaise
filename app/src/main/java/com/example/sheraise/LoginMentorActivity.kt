@@ -14,7 +14,6 @@ class LoginMentorActivity : AppCompatActivity() {
     private lateinit var passwordLogin: EditText
     private lateinit var btnLoginConfirm: Button
     private lateinit var btnGoogle: Button
-    private lateinit var btnGuestLogin: Button
     private lateinit var txtSignup: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +28,6 @@ class LoginMentorActivity : AppCompatActivity() {
         passwordLogin = findViewById(R.id.passwordLogin)
         btnLoginConfirm = findViewById(R.id.btnLoginConfirm)
         btnGoogle = findViewById(R.id.btnGoogle)
-        btnGuestLogin = findViewById(R.id.btnGuestLogin)
         txtSignup = findViewById(R.id.txtSignup)
 
         // Handle login button
@@ -42,13 +40,6 @@ class LoginMentorActivity : AppCompatActivity() {
             } else {
                 loginUser(email, password)
             }
-        }
-
-        // Login as guest
-        btnGuestLogin.setOnClickListener {
-            Toast.makeText(this, "Logged in as Guest", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, HomeMentorActivity::class.java))
-            finish()
         }
 
         // Placeholder for Google login
