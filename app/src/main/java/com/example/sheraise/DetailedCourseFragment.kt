@@ -68,7 +68,7 @@ class DetailedCourseFragment : Fragment() {
     }
 
     private fun setupTabs() {
-        val adapter = ViewPagerAdapter(this)
+        val adapter = ViewPagerAdapter(this, course?.id ?: "")
         binding.viewPager.adapter = adapter
 
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
@@ -80,6 +80,8 @@ class DetailedCourseFragment : Fragment() {
             }
         }.attach()
     }
+
+
 
     private fun setupBackButton() {
         binding.backButton.setOnClickListener {
