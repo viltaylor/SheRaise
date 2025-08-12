@@ -53,11 +53,12 @@ class CourseFragment : Fragment() {
             .addOnSuccessListener { documents ->
                 val courseList = mutableListOf<Course>()
                 for (doc in documents) {
+                    val id = doc.id // ✅ get Firestore document ID
                     val title = doc.getString("title") ?: continue
                     val mentorName = doc.getString("mentorName") ?: "Unknown"
                     val imageUrl = doc.getString("imageUrl") ?: ""
 
-                    courseList.add(Course(title, mentorName, imageUrl))
+                    courseList.add(Course(id, title, mentorName, imageUrl)) // pass ID to model
                 }
                 courseAdapter.submitList(courseList)
             }
@@ -65,6 +66,8 @@ class CourseFragment : Fragment() {
                 Toast.makeText(requireContext(), "Failed to load courses: ${e.message}", Toast.LENGTH_SHORT).show()
             }
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()

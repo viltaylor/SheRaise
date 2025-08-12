@@ -5,6 +5,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Course(
+    val id: String = "",
     val title: String = "",
     val mentorName: String = "",
     val imageUrl: String = "",
