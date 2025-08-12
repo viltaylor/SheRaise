@@ -59,7 +59,7 @@ class LoginMentorActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Success
                     Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this, HomeActivity::class.java))
+                    startActivity(Intent(this, HomeMentorActivity::class.java))
                     finish()
                 } else {
                     // Failure
