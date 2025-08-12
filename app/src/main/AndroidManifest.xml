@@ -14,6 +14,9 @@
         android:theme="@style/AppTheme"
         tools:targetApi="33">
         <activity
+            android:name=".SignUpMentorActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginMentorActivity"
             android:exported="false" />
         <activity
