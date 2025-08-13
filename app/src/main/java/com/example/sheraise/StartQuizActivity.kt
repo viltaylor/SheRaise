@@ -16,12 +16,15 @@ class StartQuizActivity : AppCompatActivity() {
 
     private lateinit var questions: List<Questions>
     private var currentIndex = 0
+    private var score = 0
     private var answerSelected = false
 
     private lateinit var questionText: TextView
     private lateinit var questionCounter: TextView
     private lateinit var answersContainer: LinearLayout
     private lateinit var btnNext: ImageButton
+    private lateinit var btnBack: ImageButton
+
     private val questionBank = mapOf(
         "Coding" to listOf(
             Questions(
@@ -122,6 +125,7 @@ class StartQuizActivity : AppCompatActivity() {
         questionCounter = findViewById(R.id.questionCounter)
         answersContainer = findViewById(R.id.answersContainer)
         btnNext = findViewById(R.id.btnNext)
+        btnBack = findViewById(R.id.btnBack)
 
         // Sample questions
         val selectedTopics = intent.getStringArrayExtra("selected_topics")?.toList() ?: emptyList()
@@ -132,19 +136,21 @@ class StartQuizActivity : AppCompatActivity() {
 
 
         loadQuestion()
+        btnBack.setOnClickListener {
+            val intent = Intent(this, LearningSelectionActivity::class.java)
+            startActivity(intent)
+            finish() // optional, closes the current activity so it’s not in back stack
+        }
 
         btnNext.setOnClickListener {
             if (currentIndex < questions.size - 1) {
                 currentIndex++
                 loadQuestion()
             } else {
-                val intent = Intent(this, HomeActivity::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
-                startActivity(intent)
-                finishAffinity() // Optional: closes all previous activities
-
+                showResultPopup()
             }
         }
+
 
     }
 
@@ -208,7 +214,9 @@ class StartQuizActivity : AppCompatActivity() {
         correctAnswer: String
     ) {
         answerSelected = true
-
+        if (isCorrect) {
+            score++
+        }
         for (i in 0 until answersContainer.childCount) {
             val card = answersContainer.getChildAt(i) as CardView
             val btn = card.getChildAt(0) as Button
@@ -233,6 +241,29 @@ class StartQuizActivity : AppCompatActivity() {
             animate().alpha(1f).setDuration(300).start()
             isEnabled = true
         }
+    }
+    private fun showResultPopup() {
+        val skillLevel = when {
+            score <= 3 -> "Beginner"
+            score <= 7 -> "Intermediate"
+            else -> "Advanced"
+        }
+
+        val message = "You got $score out of ${questions.size} correct.\nSkill Level: $skillLevel"
+
+        val dialog = android.app.AlertDialog.Builder(this)
+            .setTitle("Quiz Result")
+            .setMessage(message)
+            .setPositiveButton("OK") { _, _ ->
+                val intent = Intent(this, HomeActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+                finishAffinity()
+            }
+            .setCancelable(false)
+            .create()
+
+        dialog.show()
     }
 
 }
